@@ -262,14 +262,15 @@ class TtbarAnalysis(processor.ProcessorABC):
 
 # %%
 fileset = utils.file_input.construct_fileset(
+    "Run2_data.json",
     N_FILES_MAX_PER_SAMPLE, 
     use_xcache=False, 
     af_name=utils.config["benchmarking"]["AF_NAME"],
 )  # local files on /data for ssl-dev
 
 print(f"processes in fileset: {list(fileset.keys())}")
-print(f"\nexample of information in fileset:\n{{\n  'files': [{fileset['ttbar__nominal']['files'][0]}, ...],")
-print(f"  'metadata': {fileset['ttbar__nominal']['metadata']}\n}}")
+#print(f"\nexample of information in fileset:\n{{\n  'files': [{fileset['ttbar__nominal']['files'][0]}, ...],")
+#print(f"  'metadata': {fileset['ttbar__nominal']['metadata']}\n}}")
 
 # %% [markdown]
 # ### Execute the data delivery pipeline
