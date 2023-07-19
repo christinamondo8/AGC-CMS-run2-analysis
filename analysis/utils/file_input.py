@@ -29,7 +29,9 @@ def construct_fileset(file_name,n_files_max_per_sample, use_xcache=False, af_nam
         "single_top_t_chan": (36.993 + 22.175)/0.252,  # scale from lepton filter to inclusive
         "single_top_tW": 37.936 + 37.906,
         "wjets": 61457 * 0.252,  # e/mu+nu final states
-        "data": None
+        "data": None,
+        "SingleMuon_2018A": 1,
+        "SingleMuon_2018B": 1
     }
 
     # list of files
