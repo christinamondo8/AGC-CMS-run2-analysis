@@ -14,7 +14,7 @@
 # ---
 
 # %% [markdown]
-# # CMS Open Data $t\bar{t}$: from data delivery to statistical inference
+# # CMS Run 2 $t\bar{t}$: from data delivery to statistical inference
 #
 # We are using [2015 CMS Open Data](https://cms.cern/news/first-cms-open-data-lhc-run-2-released) in this demonstration to showcase an analysis pipeline.
 # It features data delivery and processing, histogram construction and visualization, as well as statistical inference.
@@ -27,20 +27,11 @@
 # This concerns in particular systematic uncertainties: we capture the workflow, but the actual implementations are more complex in practice.
 # If you are interested in the physics side of analyzing top pair production, check out the latest results from [ATLAS](https://twiki.cern.ch/twiki/bin/view/AtlasPublic/TopPublicResults) and [CMS](https://cms-results.web.cern.ch/cms-results/public-results/preliminary-results/)!
 # If you would like to see more technical demonstrations, also check out an [ATLAS Open Data example](https://indico.cern.ch/event/1076231/contributions/4560405/) demonstrated previously.
-#
-# This notebook implements most of the analysis pipeline shown in the following picture, using the tools also mentioned there:
-# ![ecosystem visualization](utils/ecosystem.png)
-
-# %% [markdown]
-# ### Data pipelines
-#
-# There are two possible pipelines: one with `ServiceX` enabled, and one using only `coffea` for processing.
-# ![processing pipelines](utils/processing_pipelines.png)
 
 # %% [markdown]
 # ### Imports: setting up our environment
 
-# %% tags=[]
+# %%
 import logging
 import time
 
@@ -52,8 +43,6 @@ from coffea import processor
 from coffea.nanoevents import NanoAODSchema
 from coffea.analysis_tools import PackedSelection
 import copy
-from func_adl import ObjectStream
-from func_adl_servicex import ServiceXSourceUpROOT
 import hist
 import matplotlib.pyplot as plt
 import numpy as np
@@ -86,24 +75,13 @@ logging.getLogger("cabinetry").setLevel(logging.INFO)
 #
 # The input files are all in the 1–3 GB range.
 
-# %% tags=[]
+# %%
 ### GLOBAL CONFIGURATION
 # input files per process, set to e.g. 10 (smaller number = faster)
 N_FILES_MAX_PER_SAMPLE = 5
 
 # enable Dask
 USE_DASK = True
-
-# enable ServiceX
-USE_SERVICEX = False
-
-### ML-INFERENCE SETTINGS
-
-# enable ML inference
-USE_INFERENCE = True
-
-# enable inference using NVIDIA Triton server
-USE_TRITON = False
 
 
 # %% [markdown]
@@ -114,14 +92,10 @@ USE_TRITON = False
 # - event weighting,
 # - calculating systematic uncertainties at the event and object level,
 # - filling all the information into histograms that get aggregated and ultimately returned to us by `coffea`.
-#
-# #### Machine Learning Task
-#
-# During the processing step, machine learning is used to calculate one of the variables used for this analysis. The models used are trained separately in the `jetassignment_training.ipynb` notebook. Jets in the events are assigned to labels corresponding with their parent partons using a boosted decision tree (BDT). More information about the model and training can be found within that notebook.
 
-# %% tags=[]
+# %%
 class TtbarAnalysis(processor.ProcessorABC):
-    def __init__(self, use_inference, use_triton):
+    def __init__(self):
 
         # initialize dictionary of hists for signal and control region
         self.hist_dict = {}
@@ -138,26 +112,6 @@ class TtbarAnalysis(processor.ProcessorABC):
             )
         
         self.cset = correctionlib.CorrectionSet.from_file("corrections.json")
-        self.use_inference = use_inference
-        
-        # set up attributes only needed if USE_INFERENCE=True
-        if self.use_inference:
-            
-            # initialize dictionary of hists for ML observables
-            self.ml_hist_dict = {}
-            for i in range(len(utils.config["ml"]["FEATURE_NAMES"])):
-                self.ml_hist_dict[utils.config["ml"]["FEATURE_NAMES"][i]] = (
-                    hist.Hist.new.Reg(utils.config["global"]["NUM_BINS"],
-                                      utils.config["ml"]["BIN_LOW"][i],
-                                      utils.config["ml"]["BIN_HIGH"][i],
-                                      name="observable",
-                                      label=utils.config["ml"]["FEATURE_DESCRIPTIONS"][i])
-                    .StrCat([], name="process", label="Process", growth=True)
-                    .StrCat([], name="variation", label="Systematic variation", growth=True)
-                    .Weight()
-                )
-            
-            self.use_triton = use_triton
 
     def only_do_IO(self, events):
         for branch in utils.config["benchmarking"]["IO_BRANCHES"][
@@ -179,9 +133,6 @@ class TtbarAnalysis(processor.ProcessorABC):
 
         # create copies of histogram objects
         hist_dict = copy.deepcopy(self.hist_dict)
-        if self.use_inference:
-            ml_hist_dict = copy.deepcopy(self.ml_hist_dict)
-
         process = events.metadata["process"]  # "ttbar" etc.
         variation = events.metadata["variation"]  # "nominal" etc.
 
@@ -193,11 +144,6 @@ class TtbarAnalysis(processor.ProcessorABC):
             xsec_weight = x_sec * lumi / nevts_total
         else:
             xsec_weight = 1
-
-        # setup triton gRPC client
-        if self.use_inference and self.use_triton:
-            triton_client = utils.clients.get_triton_client(utils.config["ml"]["TRITON_URL"])
-
 
         #### systematics
         # jet energy scale / resolution systematics
@@ -241,9 +187,6 @@ class TtbarAnalysis(processor.ProcessorABC):
             muons = muons[muon_reqs]
             jets = jets[jet_reqs]
 
-            if self.use_inference:
-                even = (events.event%2==0)  # whether events are even/odd
-
             B_TAG_THRESHOLD = 0.5
 
             ######### Store boolean masks with PackedSelection ##########
@@ -263,8 +206,6 @@ class TtbarAnalysis(processor.ProcessorABC):
                 region_elecs = elecs[region_selection]
                 region_muons = muons[region_selection]
                 region_weights = np.ones(len(region_jets)) * xsec_weight
-                if self.use_inference:
-                    region_even = even[region_selection]
 
                 if region == "4j1b":
                     observable = ak.sum(region_jets.pt, axis=-1)
@@ -283,38 +224,6 @@ class TtbarAnalysis(processor.ProcessorABC):
                     if sum(region_selection)==0:
                         continue
 
-                    if self.use_inference:
-                        features, perm_counts = utils.ml.get_features(
-                            region_jets,
-                            region_elecs,
-                            region_muons,
-                            max_n_jets=utils.config["ml"]["MAX_N_JETS"],
-                        )
-                        even_perm = np.repeat(region_even, perm_counts)
-
-                        # calculate ml observable
-                        if self.use_triton:
-                            results = utils.ml.get_inference_results_triton(
-                                features,
-                                even_perm,
-                                triton_client,
-                                utils.config["ml"]["MODEL_NAME"],
-                                utils.config["ml"]["MODEL_VERSION_EVEN"],
-                                utils.config["ml"]["MODEL_VERSION_ODD"],
-                            )
-
-                        else:
-                            results = utils.ml.get_inference_results_local(
-                                features,
-                                even_perm,
-                                utils.ml.model_even,
-                                utils.ml.model_odd,
-                            )
-                            
-                        results = ak.unflatten(results, perm_counts)
-                        features = ak.flatten(ak.unflatten(features, perm_counts)[
-                            ak.from_regular(ak.argmax(results,axis=1)[:, np.newaxis])
-                        ])
                 syst_var_name = f"{syst_var}"
                 # Break up the filling into event weight systematics and object variation systematics
                 if syst_var in event_systs:
@@ -331,12 +240,6 @@ class TtbarAnalysis(processor.ProcessorABC):
                             observable=observable, process=process,
                             variation=syst_var_name, weight=region_weights * wgt_variation
                         )
-                        if region == "4j2b" and self.use_inference:
-                            for i in range(len(utils.config["ml"]["FEATURE_NAMES"])):
-                                ml_hist_dict[utils.config["ml"]["FEATURE_NAMES"][i]].fill(
-                                    observable=features[..., i], process=process,
-                                    variation=syst_var_name, weight=region_weights * wgt_variation
-                                )
                 else:
                     # Should either be 'nominal' or an object variation systematic
                     if variation != "nominal":
@@ -346,18 +249,7 @@ class TtbarAnalysis(processor.ProcessorABC):
                         observable=observable, process=process,
                         variation=syst_var_name, weight=region_weights
                     )
-                    if region == "4j2b" and self.use_inference:
-                        for i in range(len(utils.config["ml"]["FEATURE_NAMES"])):
-                            ml_hist_dict[utils.config["ml"]["FEATURE_NAMES"][i]].fill(
-                                observable=features[..., i], process=process,
-                                variation=syst_var_name, weight=region_weights
-                            )
-
-
         output = {"nevents": {events.metadata["dataset"]: len(events)}, "hist_dict": hist_dict}
-        if self.use_inference:
-            output["ml_hist_dict"] = ml_hist_dict
-
         return output
 
     def postprocess(self, accumulator):
@@ -368,7 +260,7 @@ class TtbarAnalysis(processor.ProcessorABC):
 #
 # Here, we gather all the required information about the files we want to process: paths to the files and asociated metadata.
 
-# %% tags=[]
+# %%
 fileset = utils.file_input.construct_fileset(
     N_FILES_MAX_PER_SAMPLE, 
     use_xcache=False, 
@@ -379,129 +271,10 @@ print(f"processes in fileset: {list(fileset.keys())}")
 print(f"\nexample of information in fileset:\n{{\n  'files': [{fileset['ttbar__nominal']['files'][0]}, ...],")
 print(f"  'metadata': {fileset['ttbar__nominal']['metadata']}\n}}")
 
-
-# %% [markdown]
-# ### ServiceX-specific functionality: query setup
-#
-# Define the func_adl query to be used for the purpose of extracting columns and filtering.
-
-# %% tags=[]
-def get_query(source: ObjectStream) -> ObjectStream:
-    """Query for event / column selection: >=4j >=1b, ==1 lep with pT>30 GeV + additional cuts, 
-    return relevant columns
-    *NOTE* jet pT cut is set lower to account for systematic variations to jet pT
-    """
-    cuts = source.Where(lambda e: {"pt": e.Electron_pt, 
-                               "eta": e.Electron_eta, 
-                               "cutBased": e.Electron_cutBased, 
-                               "sip3d": e.Electron_sip3d,}.Zip()\
-                        .Where(lambda electron: (electron.pt > 30
-                                                 and abs(electron.eta) < 2.1 
-                                                 and electron.cutBased == 4
-                                                 and electron.sip3d < 4)).Count() 
-                        + {"pt": e.Muon_pt, 
-                           "eta": e.Muon_eta,
-                           "tightId": e.Muon_tightId,
-                           "sip3d": e.Muon_sip3d,
-                           "pfRelIso04_all": e.Muon_pfRelIso04_all}.Zip()\
-                        .Where(lambda muon: (muon.pt > 30 
-                                             and abs(muon.eta) < 2.1 
-                                             and muon.tightId 
-                                             and muon.pfRelIso04_all < 0.15)).Count()== 1)\
-                        .Where(lambda f: {"pt": f.Jet_pt, 
-                                          "eta": f.Jet_eta,
-                                          "jetId": f.Jet_jetId}.Zip()\
-                               .Where(lambda jet: (jet.pt > 25 
-                                                   and abs(jet.eta) < 2.4 
-                                                   and jet.jetId == 6)).Count() >= 4)\
-                        .Where(lambda g: {"pt": g.Jet_pt, 
-                                          "eta": g.Jet_eta,
-                                          "btagCSVV2": g.Jet_btagCSVV2,
-                                          "jetId": g.Jet_jetId}.Zip()\
-                        .Where(lambda jet: (jet.btagCSVV2 >= 0.5 
-                                            and jet.pt > 25
-                                            and abs(jet.eta) < 2.4) 
-                                            and jet.jetId == 6).Count() >= 1)
-    selection = cuts.Select(lambda h: {"Electron_pt": h.Electron_pt,
-                                       "Electron_eta": h.Electron_eta,
-                                       "Electron_phi": h.Electron_phi,
-                                       "Electron_mass": h.Electron_mass,
-                                       "Electron_cutBased": h.Electron_cutBased,
-                                       "Electron_sip3d": h.Electron_sip3d,
-                                       "Muon_pt": h.Muon_pt,
-                                       "Muon_eta": h.Muon_eta,
-                                       "Muon_phi": h.Muon_phi,
-                                       "Muon_mass": h.Muon_mass,
-                                       "Muon_tightId": h.Muon_tightId,
-                                       "Muon_sip3d": h.Muon_sip3d,
-                                       "Muon_pfRelIso04_all": h.Muon_pfRelIso04_all,
-                                       "Jet_mass": h.Jet_mass,
-                                       "Jet_pt": h.Jet_pt,
-                                       "Jet_eta": h.Jet_eta,
-                                       "Jet_phi": h.Jet_phi,
-                                       "Jet_qgl": h.Jet_qgl,
-                                       "Jet_btagCSVV2": h.Jet_btagCSVV2,
-                                       "Jet_jetId": h.Jet_jetId,
-                                       "event": h.event,
-                                      })
-    if USE_INFERENCE:
-        return selection
-    
-    # some branches are only needed if USE_INFERENCE is turned on
-    return selection.Select(lambda h: {"Electron_pt": h.Electron_pt,
-                                       "Electron_eta": h.Electron_eta,
-                                       "Electron_cutBased": h.Electron_cutBased,
-                                       "Electron_sip3d": h.Electron_sip3d,
-                                       "Muon_pt": h.Muon_pt,
-                                       "Muon_eta": h.Muon_eta,
-                                       "Muon_tightId": h.Muon_tightId,
-                                       "Muon_sip3d": h.Muon_sip3d,
-                                       "Muon_pfRelIso04_all": h.Muon_pfRelIso04_all,
-                                       "Jet_mass": h.Jet_mass,
-                                       "Jet_pt": h.Jet_pt,
-                                       "Jet_eta": h.Jet_eta,
-                                       "Jet_phi": h.Jet_phi,
-                                       "Jet_btagCSVV2": h.Jet_btagCSVV2,
-                                       "Jet_jetId": h.Jet_jetId,
-                                      })
-
-
-# %% [markdown]
-# ### Caching the queried datasets with `ServiceX`
-#
-# Using the queries created with `func_adl`, we are using `ServiceX` to read the CMS Open Data files to build cached files with only the specific event information as dictated by the query.
-
-# %% tags=[]
-if USE_SERVICEX:
-    # dummy dataset on which to generate the query
-    dummy_ds = ServiceXSourceUpROOT("cernopendata://dummy", "Events", backend_name="uproot")
-
-    # tell low-level infrastructure not to contact ServiceX yet, only to
-    # return the qastle string it would have sent
-    dummy_ds.return_qastle = True
-
-    # create the query
-    query = get_query(dummy_ds).value()
-
-    # now we query the files using a wrapper around ServiceXDataset to transform all processes at once
-    t0 = time.time()
-    ds = utils.file_input.ServiceXDatasetGroup(fileset, backend_name="uproot", ignore_cache=utils.config["global"]["SERVICEX_IGNORE_CACHE"])
-    files_per_process = ds.get_data_rootfiles_uri(query, as_signed_url=True, title="CMS ttbar")
-
-    print(f"ServiceX data delivery took {time.time() - t0:.2f} seconds")
-
-    # update fileset to point to ServiceX-transformed files
-    for process in fileset.keys():
-        fileset[process]["files"] = [f.url for f in files_per_process[process]]
-
 # %% [markdown]
 # ### Execute the data delivery pipeline
-#
-# What happens here depends on the flag `USE_SERVICEX`. If set to true, the processor is run on the data previously gathered by ServiceX, then will gather output histograms.
-#
-# When `USE_SERVICEX` is false, the input files need to be processed during this step as well.
 
-# %% tags=[]
+# %%
 NanoAODSchema.warn_missing_crossrefs = False # silences warnings about branches we will not use here
 if USE_DASK:
     cloudpickle.register_pickle_by_value(utils) # serialize methods and objects in utils so that they can be accessed within the coffea processor
@@ -516,20 +289,7 @@ run = processor.Runner(
     metadata_cache={}, 
     chunksize=utils.config["benchmarking"]["CHUNKSIZE"])
 
-if USE_SERVICEX:
-    treename = "servicex"
-
-else:
-    treename = "Events"
-
-# load local models if not using Triton
-if USE_INFERENCE and not USE_TRITON:
-    # models are not yet loaded
-    assert utils.ml.model_even is None
-    assert utils.ml.model_odd is None
-    
-    utils.ml.load_models()
-
+treename = "Events"
 filemeta = run.preprocess(fileset, treename=treename)  # pre-processing
 
 t0 = time.monotonic()
@@ -537,7 +297,7 @@ t0 = time.monotonic()
 all_histograms, metrics = run(
     fileset, 
     treename, 
-    processor_instance=TtbarAnalysis(USE_INFERENCE, USE_TRITON)
+    processor_instance=TtbarAnalysis()
 )
 exec_time = time.monotonic() - t0
 
@@ -545,7 +305,7 @@ print(f"\nexecution took {exec_time:.2f} seconds")
 
 # %%
 # track metrics
-utils.metrics.track_metrics(metrics, fileset, exec_time, USE_DASK, USE_SERVICEX, N_FILES_MAX_PER_SAMPLE)
+# utils.metrics.track_metrics(metrics, fileset, exec_time, USE_DASK, USE_SERVICEX, N_FILES_MAX_PER_SAMPLE)
 
 # %% [markdown]
 # ### Inspecting the produced histograms
@@ -553,7 +313,7 @@ utils.metrics.track_metrics(metrics, fileset, exec_time, USE_DASK, USE_SERVICEX,
 # Let's have a look at the data we obtained.
 # We built histograms in two phase space regions, for multiple physics processes and systematic variations.
 
-# %% tags=[]
+# %%
 utils.plotting.set_style()
 
 all_histograms["hist_dict"]["4j1b"][120j::hist.rebin(2), :, "nominal"].stack("process")[::-1].plot(stack=True, histtype="fill", linewidth=1, edgecolor="grey")
@@ -561,7 +321,7 @@ plt.legend(frameon=False)
 plt.title("$\geq$ 4 jets, 1 b-tag")
 plt.xlabel("$H_T$ [GeV]");
 
-# %% tags=[]
+# %%
 all_histograms["hist_dict"]["4j2b"][:, :, "nominal"].stack("process")[::-1].plot(stack=True, histtype="fill", linewidth=1,edgecolor="grey")
 plt.legend(frameon=False)
 plt.title("$\geq$ 4 jets, $\geq$ 2 b-tags")
@@ -576,7 +336,7 @@ plt.xlabel("$m_{bjj}$ [GeV]");
 #
 # We are making of [UHI](https://uhi.readthedocs.io/) here to re-bin.
 
-# %% tags=[]
+# %%
 # b-tagging variations
 all_histograms["hist_dict"]["4j1b"][120j::hist.rebin(2), "ttbar", "nominal"].plot(label="nominal", linewidth=2)
 all_histograms["hist_dict"]["4j1b"][120j::hist.rebin(2), "ttbar", "btag_var_0_up"].plot(label="NP 1", linewidth=2)
@@ -587,7 +347,7 @@ plt.legend(frameon=False)
 plt.xlabel("$H_T$ [GeV]")
 plt.title("b-tagging variations");
 
-# %% tags=[]
+# %%
 # jet energy scale variations
 all_histograms["hist_dict"]["4j2b"][:, "ttbar", "nominal"].plot(label="nominal", linewidth=2)
 all_histograms["hist_dict"]["4j2b"][:, "ttbar", "pt_scale_up"].plot(label="scale up", linewidth=2)
@@ -596,44 +356,17 @@ plt.legend(frameon=False)
 plt.xlabel("$m_{bjj}$ [Gev]")
 plt.title("Jet energy variations");
 
-# %% tags=[]
-# ML inference variables
-if USE_INFERENCE:
-    fig, axs = plt.subplots(10,2,figsize=(14,40))
-    for i in range(len(utils.config["ml"]["FEATURE_NAMES"])):
-        if i<10: 
-            column=0
-            row=i
-        else: 
-            column=1
-            row=i-10
-        all_histograms['ml_hist_dict'][utils.config["ml"]["FEATURE_NAMES"][i]][:, :, "nominal"].stack("process").project("observable").plot(
-            stack=True, 
-            histtype="fill", 
-            linewidth=1, 
-            edgecolor="grey", 
-            ax=axs[row,column]
-        )
-        axs[row, column].legend(frameon=False)
-    fig.show()
-
 # %% [markdown]
 # ### Save histograms to disk
 #
 # We'll save everything to disk for subsequent usage.
 # This also builds pseudo-data by combining events from the various simulation setups we have processed.
 
-# %% tags=[]
+# %%
 utils.file_output.save_histograms(all_histograms['hist_dict'], 
                                   fileset, 
                                   "histograms.root", 
                                   ["4j1b", "4j2b"])
-if USE_INFERENCE:
-    utils.file_output.save_histograms(all_histograms['ml_hist_dict'], 
-                                      fileset, 
-                                      "histograms_ml.root", 
-                                      utils.config["ml"]["FEATURE_NAMES"], 
-                                      rebin=False)
 
 # %% [markdown]
 # ### Statistical inference
@@ -641,7 +374,7 @@ if USE_INFERENCE:
 # A statistical model has been defined in `config.yml`, ready to be used with our output.
 # We will use `cabinetry` to combine all histograms into a `pyhf` workspace and fit the resulting statistical model to the pseudodata we built.
 
-# %% tags=[]
+# %%
 config = cabinetry.configuration.load("cabinetry_config.yml")
 cabinetry.templates.collect(config)
 cabinetry.templates.postprocess(config)  # optional post-processing (e.g. smoothing)
@@ -651,13 +384,13 @@ cabinetry.workspace.save(ws, "workspace.json")
 # %% [markdown]
 # We can inspect the workspace with `pyhf`, or use `pyhf` to perform inference.
 
-# %% tags=[]
+# %%
 # !pyhf inspect workspace.json | head -n 20
 
 # %% [markdown]
 # Let's try out what we built: the next cell will perform a maximum likelihood fit of our statistical model to the pseudodata we built.
 
-# %% tags=[]
+# %%
 model, data = cabinetry.model_utils.model_and_data(ws)
 fit_results = cabinetry.fit.fit(model, data)
 
@@ -668,7 +401,7 @@ cabinetry.visualize.pulls(
 # %% [markdown]
 # For this pseudodata, what is the resulting ttbar cross-section divided by the Standard Model prediction?
 
-# %% tags=[]
+# %%
 poi_index = model.config.poi_index
 print(f"\nfit result for ttbar_norm: {fit_results.bestfit[poi_index]:.3f} +/- {fit_results.uncertainty[poi_index]:.3f}")
 
@@ -682,47 +415,6 @@ model_prediction_postfit = cabinetry.model_utils.prediction(model, fit_results=f
 figs = cabinetry.visualize.data_mc(model_prediction, data, close_figure=True, config=config)
 # below method reimplements this visualization in a grid view
 utils.plotting.plot_data_mc(model_prediction, model_prediction_postfit, data, config)
-
-# %% [markdown]
-# ### ML Validation
-# We can further validate our results by applying the above fit to different ML observables and checking for good agreement.
-
-# %% tags=[]
-# load the ml workspace (uses the ml observable instead of previous method)
-if USE_INFERENCE:
-    config_ml = cabinetry.configuration.load("cabinetry_config_ml.yml")
-    cabinetry.templates.collect(config_ml)
-    cabinetry.templates.postprocess(config_ml)  # optional post-processing (e.g. smoothing)
-
-    ws_ml = cabinetry.workspace.build(config_ml)
-    ws_pruned = pyhf.Workspace(ws_ml).prune(channels=["Feature3", "Feature8", "Feature9",
-                                                      "Feature10", "Feature11", "Feature12",
-                                                      "Feature13", "Feature14", "Feature15",
-                                                      "Feature16", "Feature17", "Feature18",
-                                                      "Feature19"])
-
-    cabinetry.workspace.save(ws_pruned, "workspace_ml.json")
-
-# %% tags=[]
-if USE_INFERENCE:
-    model_ml, data_ml = cabinetry.model_utils.model_and_data(ws_pruned)
-
-# %% [markdown]
-# We have a channel for each ML observable:
-
-# %%
-# !pyhf inspect workspace_ml.json | head -n 20
-
-# %%
-# obtain model prediction before and after fit
-if USE_INFERENCE:
-    model_prediction = cabinetry.model_utils.prediction(model_ml)
-    fit_results_mod = cabinetry.model_utils.match_fit_results(model_ml, fit_results)
-    model_prediction_postfit = cabinetry.model_utils.prediction(model_ml, fit_results=fit_results_mod)
-
-# %% tags=[]
-if USE_INFERENCE:
-    utils.plotting.plot_data_mc(model_prediction, model_prediction_postfit, data_ml, config_ml)
 
 # %% [markdown]
 # ### What is next?
