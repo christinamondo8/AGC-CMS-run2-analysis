@@ -135,15 +135,18 @@ class TtbarAnalysis(processor.ProcessorABC):
         hist_dict = copy.deepcopy(self.hist_dict)
         process = events.metadata["process"]  # "ttbar" etc.
         variation = events.metadata["variation"]  # "nominal" etc.
+        is_data = events.metadata["is_data"]
 
         # normalization for MC
         x_sec = events.metadata["xsec"]
         nevts_total = events.metadata["nevts"]
         lumi = 3378 # /pb
-        if process != "data":
-            xsec_weight = x_sec * lumi / nevts_total
-        else:
+        
+        if is_data:
+            process = "data"
             xsec_weight = 1
+        else:
+            xsec_weight = x_sec * lumi / nevts_totalW
 
         #### systematics
         # jet energy scale / resolution systematics

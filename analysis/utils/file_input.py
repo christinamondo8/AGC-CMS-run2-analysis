@@ -46,8 +46,10 @@ def construct_fileset(file_name,n_files_max_per_sample, use_xcache=False, af_nam
 
         if "variations" in file_info[process]:
             variations = file_info[process]["variations"]
+            is_data = file_info[process]["is_data"]
         else:
             variations = file_info[process]
+            is_data = False
 
         for variation in variations.keys():
             file_list = variations[variation]["files"]
@@ -67,7 +69,7 @@ def construct_fileset(file_name,n_files_max_per_sample, use_xcache=False, af_nam
                         download_file(remote, local)
                 file_paths = local_paths
             nevts_total = sum([f["nevts"] for f in file_list])
-            metadata = {"process": process, "variation": variation, "nevts": nevts_total, "xsec": xsec_info[process]}
+            metadata = {"process": process, "variation": variation, "nevts": nevts_total, "xsec": xsec_info[process], "is_data": is_data}
             fileset.update({f"{process}__{variation}": {"files": file_paths, "metadata": metadata}})
 
     return fileset
