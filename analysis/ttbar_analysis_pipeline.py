@@ -146,7 +146,7 @@ class TtbarAnalysis(processor.ProcessorABC):
             process = "data"
             xsec_weight = 1
         else:
-            xsec_weight = x_sec * lumi / nevts_totalW
+            xsec_weight = x_sec * lumi / nevts_total
 
         #### systematics
         # jet energy scale / resolution systematics
