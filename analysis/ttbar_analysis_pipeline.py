@@ -169,6 +169,8 @@ class TtbarAnalysis(processor.ProcessorABC):
 
         # for pt_var in pt_variations:
         for syst_var in syst_variations:
+            if is_data and syst_var != "nominal":
+                continue
             ### event selection
             # very very loosely based on https://arxiv.org/abs/2006.13076
 

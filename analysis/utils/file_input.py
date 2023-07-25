@@ -34,6 +34,9 @@ def construct_fileset(file_name,n_files_max_per_sample, use_xcache=False, af_nam
         "SingleMuon_2018B": 1
     }
 
+    # For now we set CMS Run2 MC ttbar xsec to open data ttbar xsec -> Need to update in the future
+    xsec_info["TTJets_UL2018"] = xsec_info["ttbar"]
+
     # list of files
     with open(file_name) as f:
         file_info = json.load(f)
@@ -68,7 +71,8 @@ def construct_fileset(file_name,n_files_max_per_sample, use_xcache=False, af_nam
                     if not Path(local).exists():
                         download_file(remote, local)
                 file_paths = local_paths
-            nevts_total = sum([f["nevts"] for f in file_list])
+            # Use the total number of events in entire sample
+            nevts_total = variations[variation]["nevts_total"]
             metadata = {"process": process, "variation": variation, "nevts": nevts_total, "xsec": xsec_info[process], "is_data": is_data}
             fileset.update({f"{process}__{variation}": {"files": file_paths, "metadata": metadata}})
 
