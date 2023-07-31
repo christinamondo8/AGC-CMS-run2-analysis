@@ -375,7 +375,8 @@
                 ]
             }
         },
-        "is_data": true
+        "is_data": true,
+        "year": 2018
     },
     "SingleMuon_2018B": {
         "variations": {
@@ -589,7 +590,8 @@
                 ]
             }
         },
-        "is_data": true
+        "is_data": true,
+        "year": 2018
     },
     "TTJets_UL2018": {
         "variations": {
@@ -3215,7 +3217,8 @@
                 ]
             }
         },
-        "is_data": false
+        "is_data": false,
+        "year": 2018
     },
     "SingleMuon_2018C": {
         "variations": {
@@ -3449,7 +3452,8 @@
                 ]
             }
         },
-        "is_data": true
+        "is_data": true,
+        "year": 2018
     },
     "SingleMuon_2018D": {
         "variations": {
@@ -4235,9 +4239,10 @@
                 ]
             }
         },
-        "is_data": true
+        "is_data": true,
+        "year": 2018
     },
-    "WJets_ToLNu": {
+    "WJets_UL2018": {
         "variations": {
             "nominal": {
                 "nevts_total": 81051269,
@@ -4621,6 +4626,7 @@
                 ]
             }
         },
-        "is_data": false
+        "is_data": false,
+        "year": 2018
     }
 }
