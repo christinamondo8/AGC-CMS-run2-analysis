@@ -136,6 +136,7 @@ class TtbarAnalysis(processor.ProcessorABC):
         process = events.metadata["process"]  # "ttbar" etc.
         variation = events.metadata["variation"]  # "nominal" etc.
         is_data = events.metadata["is_data"]
+        year = events.metadata["year"]
 
         # normalization for MC
         x_sec = events.metadata["xsec"]

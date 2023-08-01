@@ -50,9 +50,11 @@ def construct_fileset(file_name,n_files_max_per_sample, use_xcache=False, af_nam
         if "variations" in file_info[process]:
             variations = file_info[process]["variations"]
             is_data = file_info[process]["is_data"]
+            year = file_info[process]["year"]
         else:
             variations = file_info[process]
             is_data = False
+            year = -1
 
         for variation in variations.keys():
             file_list = variations[variation]["files"]
@@ -73,7 +75,14 @@ def construct_fileset(file_name,n_files_max_per_sample, use_xcache=False, af_nam
                 file_paths = local_paths
             # Use the total number of events in entire sample
             nevts_total = variations[variation]["nevts_total"]
-            metadata = {"process": process, "variation": variation, "nevts": nevts_total, "xsec": xsec_info[process], "is_data": is_data}
+            metadata = {
+                "process": process,
+                "variation": variation,
+                "nevts": nevts_total,
+                "xsec": xsec_info[process],
+                "is_data": is_data,
+                "year": year
+            }
             fileset.update({f"{process}__{variation}": {"files": file_paths, "metadata": metadata}})
 
     return fileset
