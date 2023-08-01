@@ -42,6 +42,7 @@ import correctionlib
 from coffea import processor
 from coffea.nanoevents import NanoAODSchema
 from coffea.analysis_tools import PackedSelection
+from coffea.lumi_tools import LumiMask
 import copy
 import hist
 import matplotlib.pyplot as plt
@@ -111,7 +112,12 @@ class TtbarAnalysis(processor.ProcessorABC):
                 .Weight()
             )
         
-        self.cset = correctionlib.CorrectionSet.from_file("corrections.json")
+        self.cset = correctionlib.CorrectionSet.from_file("json/corrections.json")
+        self.golden = {
+            "2016": LumiMask("json/golden/Cert_271036-284044_13TeV_Legacy2016_Collisions16.json"),
+            "2017": LumiMask("json/golden/Cert_294927-306462_13TeV_UL2017_Collisions17.json"),
+            "2018": LumiMask("json/golden/Cert_314472-325175_13TeV_Legacy2018_Collisions18.json"),
+        }
 
     def only_do_IO(self, events):
         for branch in utils.config["benchmarking"]["IO_BRANCHES"][
@@ -143,11 +149,18 @@ class TtbarAnalysis(processor.ProcessorABC):
         x_sec = events.metadata["xsec"]
         nevts_total = events.metadata["nevts"]
         lumi = 3378 # /pb
-        if year == "2018":
-            lumi = 59830 # pb
+        if year == "2016":
+            lumi = 16810    # pb
+        elif year == "2016APV":
+            lumi = 19520    # pb
+        elif year == "2017":
+            lumi = 41480    # pb
+        elif year == "2018":
+            lumi = 59830    # pb
 
         # process here needs to be the actual name of the CMS dataset
         pass_trg = utils.selection.get_trigger_overlap_mask(events,process,is_data,year)
+        lumi_mask = self.golden[year](events.run,events.luminosityBlock)
 
         if is_data:
             process = "data"
@@ -203,6 +216,8 @@ class TtbarAnalysis(processor.ProcessorABC):
 
             ######### Store boolean masks with PackedSelection ##########
             selections = PackedSelection(dtype='uint64')
+            # Lumi mask (for data)
+            selections.add("is_good_lumi", lumi_mask)
             # Basic selection criteria
             selections.add("exactly_1l", (ak.num(elecs) + ak.num(muons)) == 1)
             selections.add("atleast_4j", ak.num(jets) >= 4)
@@ -213,7 +228,10 @@ class TtbarAnalysis(processor.ProcessorABC):
             selections.add("4j2b", selections.all("exactly_1l", "atleast_4j", "atleast_2b") & pass_trg)
 
             for region in ["4j1b", "4j2b"]:
-                region_selection = selections.all(region)
+                if is_data:
+                    region_selection = selections.all(region,"is_good_lumi")
+                else:
+                    region_selection = selections.all(region)
                 region_jets = jets[region_selection]
                 region_elecs = elecs[region_selection]
                 region_muons = muons[region_selection]
@@ -274,7 +292,7 @@ class TtbarAnalysis(processor.ProcessorABC):
 
 # %%
 fileset = utils.file_input.construct_fileset(
-    "Run2_data.json",
+    "json/Run2_data.json",
     N_FILES_MAX_PER_SAMPLE, 
     use_xcache=False, 
     af_name=utils.config["benchmarking"]["AF_NAME"],
