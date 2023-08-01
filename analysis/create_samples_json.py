@@ -1,9 +1,8 @@
 import os
-os.rename ("SingleMuon_2018A.py", "create_samples_json.py")
 import json
+import subprocess
 
-
-home_dir = os.environ["HOME"]
+git_dir = subprocess.check_output(["git","rev-parse","--show-toplevel"]).decode().strip()
 text_files = [
     "SingleMuon_2018A", "SingleMuon_2018B", "TTJets_UL2018", "SingleMuon_2018C",
     "SingleMuon_2018D", "WJets_UL2018"
@@ -19,7 +18,7 @@ mc_dict = {
 d = {}
 
 for dataset_name in text_files:
-    file_path = os.path.join(home_dir,"Desktop/uscms-summer-internship/research-2023",dataset_name + ".txt")
+    file_path = os.path.join(git_dir,"analysis/samples",dataset_name + ".txt")
     fin = open(file_path, mode='r')
     is_mc = dataset_name in mc_dict
 
