@@ -143,6 +143,8 @@ class TtbarAnalysis(processor.ProcessorABC):
         x_sec = events.metadata["xsec"]
         nevts_total = events.metadata["nevts"]
         lumi = 3378 # /pb
+        if year == "2018":
+            lumi = 59830 # pb
 
         # process here needs to be the actual name of the CMS dataset
         pass_trg = utils.selection.get_trigger_overlap_mask(events,process,is_data,year)
@@ -427,7 +429,7 @@ figs = cabinetry.visualize.data_mc(model_prediction, data, close_figure=True, co
 # below method reimplements this visualization in a grid view
 utils.plotting.plot_data_mc(model_prediction, model_prediction_postfit, data, config)
 
-# %% [markdown]
+# %% [markdown] jupyter={"source_hidden": true} tags=[]
 # ### What is next?
 #
 # Our next goals for this pipeline demonstration are:

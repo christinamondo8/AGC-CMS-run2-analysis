@@ -30,12 +30,12 @@ def construct_fileset(file_name,n_files_max_per_sample, use_xcache=False, af_nam
         "single_top_tW": 37.936 + 37.906,
         "wjets": 61457 * 0.252,  # e/mu+nu final states
         "data": None,
-        "SingleMuon_2018A": 1,
-        "SingleMuon_2018B": 1
+        "SingleMuon": 1,
     }
 
-    # For now we set CMS Run2 MC ttbar xsec to open data ttbar xsec -> Need to update in the future
+    # For now we set CMS Run2 MC xsecs to open data xsecs -> Need to update in the future
     xsec_info["TTJets_UL2018"] = xsec_info["ttbar"]
+    xsec_info["WJets_UL2018"] = xsec_info["wjets"]
 
     # list of files
     with open(file_name) as f:
@@ -51,7 +51,10 @@ def construct_fileset(file_name,n_files_max_per_sample, use_xcache=False, af_nam
             variations = file_info[process]["variations"]
             is_data = file_info[process]["is_data"]
             year = str(file_info[process]["year"])
-            process,era = process.split(f"_{year}")
+            if is_data:
+                process,era = process.split(f"_{year}")
+            else:
+                era = ""
         else:
             variations = file_info[process]
             is_data = False
@@ -87,7 +90,7 @@ def construct_fileset(file_name,n_files_max_per_sample, use_xcache=False, af_nam
                 "era": era,
             }
             fileset.update({
-                f"{process}{era}__{variation}": {
+                f"{process}{year}{era}__{variation}": {
                     "files": file_paths,
                     "metadata": metadata
                 }

@@ -8,7 +8,7 @@ dataset_dict = {
                 "IsoMu24",
                 "IsoMu27"
             ],
-        }
+        },
         "order": ["SingleMuon"]
     }
 }
@@ -52,6 +52,6 @@ def get_trigger_overlap_mask(events,dataset,is_data,year):
         for dname,triggers in dataset_dict[year]["datasets"].items():
             trigger_list.extend(triggers)
         passes = passes_triggers(events,trigger_list)
-        overlaps = np.zero_like(passes, dtype=np.bool)  # MC samples have no overlaps
+        overlaps = np.zeros_like(passes, dtype=np.bool)  # MC samples have no overlaps
 
     return (passes & ~overlaps)
