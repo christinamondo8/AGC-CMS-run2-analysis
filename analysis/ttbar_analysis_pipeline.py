@@ -133,16 +133,20 @@ class TtbarAnalysis(processor.ProcessorABC):
 
         # create copies of histogram objects
         hist_dict = copy.deepcopy(self.hist_dict)
-        process = events.metadata["process"]  # "ttbar" etc.
-        variation = events.metadata["variation"]  # "nominal" etc.
+        process = events.metadata["process"]        # "ttbar" etc.
+        variation = events.metadata["variation"]    # "nominal" etc.
         is_data = events.metadata["is_data"]
-        year = events.metadata["year"]
+        year = events.metadata["year"]              # In string format
+        era = events.metadata["era"]
 
         # normalization for MC
         x_sec = events.metadata["xsec"]
         nevts_total = events.metadata["nevts"]
         lumi = 3378 # /pb
-        
+
+        # process here needs to be the actual name of the CMS dataset
+        pass_trg = utils.selection.get_trigger_overlap_mask(events,process,is_data,year)
+
         if is_data:
             process = "data"
             xsec_weight = 1
@@ -203,8 +207,8 @@ class TtbarAnalysis(processor.ProcessorABC):
             selections.add("exactly_1b", ak.sum(jets.btagCSVV2 >= B_TAG_THRESHOLD, axis=1) == 1)
             selections.add("atleast_2b", ak.sum(jets.btagCSVV2 > B_TAG_THRESHOLD, axis=1) >= 2)
             # Complex selection criteria
-            selections.add("4j1b", selections.all("exactly_1l", "atleast_4j", "exactly_1b"))
-            selections.add("4j2b", selections.all("exactly_1l", "atleast_4j", "atleast_2b"))
+            selections.add("4j1b", selections.all("exactly_1l", "atleast_4j", "exactly_1b") & pass_trg)
+            selections.add("4j2b", selections.all("exactly_1l", "atleast_4j", "atleast_2b") & pass_trg)
 
             for region in ["4j1b", "4j2b"]:
                 region_selection = selections.all(region)

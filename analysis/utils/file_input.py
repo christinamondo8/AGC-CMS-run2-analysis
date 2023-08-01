@@ -50,11 +50,13 @@ def construct_fileset(file_name,n_files_max_per_sample, use_xcache=False, af_nam
         if "variations" in file_info[process]:
             variations = file_info[process]["variations"]
             is_data = file_info[process]["is_data"]
-            year = file_info[process]["year"]
+            year = str(file_info[process]["year"])
+            process,era = process.split(f"_{year}")
         else:
             variations = file_info[process]
             is_data = False
-            year = -1
+            year = ""
+            era = ""
 
         for variation in variations.keys():
             file_list = variations[variation]["files"]
@@ -81,9 +83,15 @@ def construct_fileset(file_name,n_files_max_per_sample, use_xcache=False, af_nam
                 "nevts": nevts_total,
                 "xsec": xsec_info[process],
                 "is_data": is_data,
-                "year": year
+                "year": year,
+                "era": era,
             }
-            fileset.update({f"{process}__{variation}": {"files": file_paths, "metadata": metadata}})
+            fileset.update({
+                f"{process}{era}__{variation}": {
+                    "files": file_paths,
+                    "metadata": metadata
+                }
+            })
 
     return fileset
 

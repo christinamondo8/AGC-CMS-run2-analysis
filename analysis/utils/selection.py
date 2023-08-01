@@ -34,7 +34,19 @@ def get_trigger_overlap_mask(events,dataset,is_data,year):
         year = "2016"
 
     if is_data:
-        
+        dataset_triggers = dataset_dict[year]["datasets"][dataset]
+        overlap_triggers = []
+        # All events from the n-th dataset are considered to be non-duplicates. All events from the
+        #   n-1 dataset are considered to be non-duplicates if they didn't pass triggers from the
+        #   n-th dataset. All events from the n-2 dataset are considered to be non-duplicates if they
+        #   didn't pass triggers from either the n-1 or the n-th datasets.
+        overlap_order = dataset_dict[year]["order"]
+        idx = overlap_order.index(dataset)
+        for dname in overlap_order[idx+1:]:
+            triggers = dataset_dict[year]["datasets"][dname]
+            overlap_triggers.extend(triggers)
+        passes = passes_triggers(events,dataset_triggers)
+        overlaps = passes_triggers(events,overlap_triggers)
     else:
         trigger_list = []
         for dname,triggers in dataset_dict[year]["datasets"].items():
@@ -42,3 +54,4 @@ def get_trigger_overlap_mask(events,dataset,is_data,year):
         passes = passes_triggers(events,trigger_list)
         overlaps = np.zero_like(passes, dtype=np.bool)  # MC samples have no overlaps
 
+    return (passes & ~overlaps)
