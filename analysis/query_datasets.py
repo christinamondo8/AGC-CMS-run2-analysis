@@ -14,6 +14,7 @@ class Dataset(object):
         self.variation = kwargs.pop('variation','nominal')
         self.nevts_total = kwargs.pop('nevts_total',-1)
         self.xsec = kwargs.pop("xsec",-1)
+        self.variation = kwargs.pop("variation","nominal")
         self.files = []
         self.filesets = []
 
@@ -31,9 +32,14 @@ class Dataset(object):
 
     def asdict(self):
         d = {
-            "nevts_total": self.nevts_total,
-            "year": self.year,
-            "files": self.files,
+            "variations": {
+                self.variation: {
+                    "files": self.files,
+                    "year": self.year,
+                    "nevts_total": self.nevts_total,
+                    "is_data": self.is_data,
+                }
+            }
         }
         return d
         
