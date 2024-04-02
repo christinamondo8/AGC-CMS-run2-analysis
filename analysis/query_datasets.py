@@ -35,11 +35,11 @@ class Dataset(object):
             "variations": {
                 self.variation: {
                     "files": self.files,
-                    "year": self.year,
                     "nevts_total": self.nevts_total,
-                    "is_data": self.is_data,
                 }
-            }
+            },
+            "year": self.year,
+            "is_data": self.is_data,
         }
         return d
         

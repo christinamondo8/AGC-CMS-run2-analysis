@@ -1,5 +1,6 @@
 {
     "DY10to50_UL2016": {
+        "is_data": false,
         "variations": {
             "nominal": {
                 "files": [
@@ -38,13 +39,13 @@
                     "root://xcache//store/mc/RunIISummer20UL16NanoAODv9/DYJetsToLL_M-10to50_TuneCP5_13TeV-madgraphMLM-pythia8/NANOAODSIM/106X_mcRun2_asymptotic_v17-v1/40000/F73AF0C6-EC76-DE4A-B803-749B823B6D72.root",
                     "root://xcache//store/mc/RunIISummer20UL16NanoAODv9/DYJetsToLL_M-10to50_TuneCP5_13TeV-madgraphMLM-pythia8/NANOAODSIM/106X_mcRun2_asymptotic_v17-v1/50000/07ADA7FD-2700-AA47-AD50-E240338085DB.root"
                 ],
-                "is_data": false,
-                "nevts_total": 22388550,
-                "year": "2016"
+                "nevts_total": 22388550
             }
-        }
+        },
+        "year": "2016"
     },
     "DY10to50_UL2016APV": {
+        "is_data": false,
         "variations": {
             "nominal": {
                 "files": [
@@ -68,13 +69,13 @@
                     "root://xcache//store/mc/RunIISummer20UL16NanoAODAPVv9/DYJetsToLL_M-10to50_TuneCP5_13TeV-madgraphMLM-pythia8/NANOAODSIM/106X_mcRun2_asymptotic_preVFP_v11-v1/50000/EB80FF84-1EBF-1E4B-B99E-F2D1D7CF8D09.root",
                     "root://xcache//store/mc/RunIISummer20UL16NanoAODAPVv9/DYJetsToLL_M-10to50_TuneCP5_13TeV-madgraphMLM-pythia8/NANOAODSIM/106X_mcRun2_asymptotic_preVFP_v11-v1/50000/FF12F5EF-BC71-A040-9EF0-523A7791AD82.root"
                 ],
-                "is_data": false,
-                "nevts_total": 25799525,
-                "year": "2016APV"
+                "nevts_total": 25799525
             }
-        }
+        },
+        "year": "2016APV"
     },
     "DY10to50_UL2017": {
+        "is_data": false,
         "variations": {
             "nominal": {
                 "files": [
@@ -156,13 +157,13 @@
                     "root://xcache//store/mc/RunIISummer20UL17NanoAODv9/DYJetsToLL_M-10to50_TuneCP5_13TeV-madgraphMLM-pythia8/NANOAODSIM/106X_mc2017_realistic_v9-v1/70000/F03D7ADA-9326-DF45-A1CC-2F6D64CBBF0D.root",
                     "root://xcache//store/mc/RunIISummer20UL17NanoAODv9/DYJetsToLL_M-10to50_TuneCP5_13TeV-madgraphMLM-pythia8/NANOAODSIM/106X_mc2017_realistic_v9-v1/70000/F278BD20-5D06-A74B-B939-17294873A545.root"
                 ],
-                "is_data": false,
-                "nevts_total": 68480179,
-                "year": "2017"
+                "nevts_total": 68480179
             }
-        }
+        },
+        "year": "2017"
     },
     "DY10to50_UL2018": {
+        "is_data": false,
         "variations": {
             "nominal": {
                 "files": [
@@ -251,13 +252,13 @@
                     "root://xcache//store/mc/RunIISummer20UL18NanoAODv9/DYJetsToLL_M-10to50_TuneCP5_13TeV-madgraphMLM-pythia8/NANOAODSIM/106X_upgrade2018_realistic_v16_L1v1-v1/70000/78BD47DA-8E7D-084A-AD90-47D04B11B4E2.root",
                     "root://xcache//store/mc/RunIISummer20UL18NanoAODv9/DYJetsToLL_M-10to50_TuneCP5_13TeV-madgraphMLM-pythia8/NANOAODSIM/106X_upgrade2018_realistic_v16_L1v1-v1/70000/F1DF2A02-1AEE-AB4A-A6CB-9FC768CFEA78.root"
                 ],
-                "is_data": false,
-                "nevts_total": 94452816,
-                "year": "2018"
+                "nevts_total": 94452816
             }
-        }
+        },
+        "year": "2018"
     },
     "DY50_UL2016": {
+        "is_data": false,
         "variations": {
             "nominal": {
                 "files": [
@@ -303,13 +304,13 @@
                     "root://xcache//store/mc/RunIISummer20UL16NanoAODv9/DYJetsToLL_M-50_TuneCP5_13TeV-amcatnloFXFX-pythia8/NANOAODSIM/106X_mcRun2_asymptotic_v17-v1/30000/E94099CB-E3C8-EB43-B182-4EA89C7C5411.root",
                     "root://xcache//store/mc/RunIISummer20UL16NanoAODv9/DYJetsToLL_M-50_TuneCP5_13TeV-amcatnloFXFX-pythia8/NANOAODSIM/106X_mcRun2_asymptotic_v17-v1/30000/ED08B6D8-2823-D24D-B1BA-1141EA893E7B.root"
                 ],
-                "is_data": false,
-                "nevts_total": 71839442,
-                "year": "2016"
+                "nevts_total": 71839442
             }
-        }
+        },
+        "year": "2016"
     },
     "DY50_UL2016APV": {
+        "is_data": false,
         "variations": {
             "nominal": {
                 "files": [
@@ -376,13 +377,13 @@
                     "root://xcache//store/mc/RunIISummer20UL16NanoAODAPVv9/DYJetsToLL_M-50_TuneCP5_13TeV-amcatnloFXFX-pythia8/NANOAODSIM/106X_mcRun2_asymptotic_preVFP_v11-v1/70000/C20C8C64-16B2-C64A-9583-E3AAC5B0C257.root",
                     "root://xcache//store/mc/RunIISummer20UL16NanoAODAPVv9/DYJetsToLL_M-50_TuneCP5_13TeV-amcatnloFXFX-pythia8/NANOAODSIM/106X_mcRun2_asymptotic_preVFP_v11-v1/70000/C8286E25-A0CC-3341-97E9-A4E480C2C1D6.root"
                 ],
-                "is_data": false,
-                "nevts_total": 90947213,
-                "year": "2016APV"
+                "nevts_total": 90947213
             }
-        }
+        },
+        "year": "2016APV"
     },
     "DY50_UL2017": {
+        "is_data": false,
         "variations": {
             "nominal": {
                 "files": [
@@ -540,13 +541,13 @@
                     "root://xcache//store/mc/RunIISummer20UL17NanoAODv9/DYJetsToLL_M-50_TuneCP5_13TeV-amcatnloFXFX-pythia8/NANOAODSIM/106X_mc2017_realistic_v9-v2/40000/F6D06486-1C27-0944-9BDE-05AE436F8763.root",
                     "root://xcache//store/mc/RunIISummer20UL17NanoAODv9/DYJetsToLL_M-50_TuneCP5_13TeV-amcatnloFXFX-pythia8/NANOAODSIM/106X_mc2017_realistic_v9-v2/40000/F8750513-3783-9143-BB9E-766AB1045A29.root"
                 ],
-                "is_data": false,
-                "nevts_total": 195529774,
-                "year": "2017"
+                "nevts_total": 195529774
             }
-        }
+        },
+        "year": "2017"
     },
     "DY50_UL2018": {
+        "is_data": false,
         "variations": {
             "nominal": {
                 "files": [
@@ -755,13 +756,13 @@
                     "root://xcache//store/mc/RunIISummer20UL18NanoAODv9/DYJetsToLL_M-50_TuneCP5_13TeV-amcatnloFXFX-pythia8/NANOAODSIM/106X_upgrade2018_realistic_v16_L1v1-v2/40000/F876F630-2286-684B-81E3-A2D6DF65DC07.root",
                     "root://xcache//store/mc/RunIISummer20UL18NanoAODv9/DYJetsToLL_M-50_TuneCP5_13TeV-amcatnloFXFX-pythia8/NANOAODSIM/106X_upgrade2018_realistic_v16_L1v1-v2/40000/F97702D0-7881-134A-9866-DDD2F084ECCC.root"
                 ],
-                "is_data": false,
-                "nevts_total": 195510810,
-                "year": "2018"
+                "nevts_total": 195510810
             }
-        }
+        },
+        "year": "2018"
     },
     "DoubleEG_B-UL2017": {
+        "is_data": true,
         "variations": {
             "nominal": {
                 "files": [
@@ -795,13 +796,13 @@
                     "root://xcache//store/data/Run2017B/DoubleEG/NANOAOD/UL2017_MiniAODv2_NanoAODv9-v1/70000/CFCA7A3D-1FCD-1644-97A4-27F303DDA461.root",
                     "root://xcache//store/data/Run2017B/DoubleEG/NANOAOD/UL2017_MiniAODv2_NanoAODv9-v1/70000/D3707E68-5015-C240-B8A6-4134B9387B09.root"
                 ],
-                "is_data": true,
-                "nevts_total": 58088760.0,
-                "year": "2017"
+                "nevts_total": 58088760.0
             }
-        }
+        },
+        "year": "2017"
     },
     "DoubleEG_B-ver1_HIPM_UL2016": {
+        "is_data": true,
         "variations": {
             "nominal": {
                 "files": [
@@ -813,13 +814,13 @@
                     "root://xcache//store/data/Run2016B/DoubleEG/NANOAOD/ver1_HIPM_UL2016_MiniAODv2_NanoAODv9-v2/2530000/BD01422E-8128-834F-93FE-07E8F922A3D9.root",
                     "root://xcache//store/data/Run2016B/DoubleEG/NANOAOD/ver1_HIPM_UL2016_MiniAODv2_NanoAODv9-v2/2530000/ECCD67BD-4FD8-AC49-96D7-ADA3546056D4.root"
                 ],
-                "is_data": true,
-                "nevts_total": 5686987.0,
-                "year": "2016APV"
+                "nevts_total": 5686987.0
             }
-        }
+        },
+        "year": "2016APV"
     },
     "DoubleEG_B-ver2_HIPM_UL2016": {
+        "is_data": true,
         "variations": {
             "nominal": {
                 "files": [
@@ -891,13 +892,13 @@
                     "root://xcache//store/data/Run2016B/DoubleEG/NANOAOD/ver2_HIPM_UL2016_MiniAODv2_NanoAODv9-v3/40000/CAFF4991-27C1-2144-8837-A5B530CE0ED3.root",
                     "root://xcache//store/data/Run2016B/DoubleEG/NANOAOD/ver2_HIPM_UL2016_MiniAODv2_NanoAODv9-v3/40000/F880430C-AE04-8147-8207-75A8184B5796.root"
                 ],
-                "is_data": true,
-                "nevts_total": 143073268.0,
-                "year": "2016APV"
+                "nevts_total": 143073268.0
             }
-        }
+        },
+        "year": "2016APV"
     },
     "DoubleEG_C-HIPM_UL2016": {
+        "is_data": true,
         "variations": {
             "nominal": {
                 "files": [
@@ -935,13 +936,13 @@
                     "root://xcache//store/data/Run2016C/DoubleEG/NANOAOD/HIPM_UL2016_MiniAODv2_NanoAODv9-v2/50000/EDAD9035-EFD6-DC47-B395-BB78A2488D52.root",
                     "root://xcache//store/data/Run2016C/DoubleEG/NANOAOD/HIPM_UL2016_MiniAODv2_NanoAODv9-v2/50000/F18A5BA2-3D69-B941-A110-13160A9B6A3B.root"
                 ],
-                "is_data": true,
-                "nevts_total": 47677856.0,
-                "year": "2016APV"
+                "nevts_total": 47677856.0
             }
-        }
+        },
+        "year": "2016APV"
     },
     "DoubleEG_C-UL2017": {
+        "is_data": true,
         "variations": {
             "nominal": {
                 "files": [
@@ -990,13 +991,13 @@
                     "root://xcache//store/data/Run2017C/DoubleEG/NANOAOD/UL2017_MiniAODv2_NanoAODv9-v1/280000/738C3B50-D003-1C4B-ADEB-3124E603C43C.root",
                     "root://xcache//store/data/Run2017C/DoubleEG/NANOAOD/UL2017_MiniAODv2_NanoAODv9-v1/280000/9230E32C-9A06-6943-8264-8DF42F635F0A.root"
                 ],
-                "is_data": true,
-                "nevts_total": 65181125.0,
-                "year": "2017"
+                "nevts_total": 65181125.0
             }
-        }
+        },
+        "year": "2017"
     },
     "DoubleEG_D-HIPM_UL2016": {
+        "is_data": true,
         "variations": {
             "nominal": {
                 "files": [
@@ -1057,13 +1058,13 @@
                     "root://xcache//store/data/Run2016D/DoubleEG/NANOAOD/HIPM_UL2016_MiniAODv2_NanoAODv9-v2/50000/F4737B58-BDB2-C044-851F-C96311DDC625.root",
                     "root://xcache//store/data/Run2016D/DoubleEG/NANOAOD/HIPM_UL2016_MiniAODv2_NanoAODv9-v2/50000/F5EBBC69-D4B9-F142-8461-3B427BD49808.root"
                 ],
-                "is_data": true,
-                "nevts_total": 53324960.0,
-                "year": "2016APV"
+                "nevts_total": 53324960.0
             }
-        }
+        },
+        "year": "2016APV"
     },
     "DoubleEG_D-UL2017": {
+        "is_data": true,
         "variations": {
             "nominal": {
                 "files": [
@@ -1082,13 +1083,13 @@
                     "root://xcache//store/data/Run2017D/DoubleEG/NANOAOD/UL2017_MiniAODv2_NanoAODv9-v1/270000/C4D9C76B-A2A8-EC4E-9EBE-3AAB6D153410.root",
                     "root://xcache//store/data/Run2017D/DoubleEG/NANOAOD/UL2017_MiniAODv2_NanoAODv9-v1/270000/DB7FC99C-99EC-3845-8B18-65E2D38A8D19.root"
                 ],
-                "is_data": true,
-                "nevts_total": 25911432.0,
-                "year": "2017"
+                "nevts_total": 25911432.0
             }
-        }
+        },
+        "year": "2017"
     },
     "DoubleEG_E-HIPM_UL2016": {
+        "is_data": true,
         "variations": {
             "nominal": {
                 "files": [
@@ -1127,13 +1128,13 @@
                     "root://xcache//store/data/Run2016E/DoubleEG/NANOAOD/HIPM_UL2016_MiniAODv2_NanoAODv9-v2/2530000/F25E1003-16E6-AA45-A30E-B99010E5B765.root",
                     "root://xcache//store/data/Run2016E/DoubleEG/NANOAOD/HIPM_UL2016_MiniAODv2_NanoAODv9-v2/2530000/FA06CAA5-3F23-A94B-94FE-7C20307EA2CA.root"
                 ],
-                "is_data": true,
-                "nevts_total": 49877710.0,
-                "year": "2016APV"
+                "nevts_total": 49877710.0
             }
-        }
+        },
+        "year": "2016APV"
     },
     "DoubleEG_E-UL2017": {
+        "is_data": true,
         "variations": {
             "nominal": {
                 "files": [
@@ -1170,13 +1171,13 @@
                     "root://xcache//store/data/Run2017E/DoubleEG/NANOAOD/UL2017_MiniAODv2_NanoAODv9-v1/270000/E2793F33-661D-6141-A916-261A78EBEAA7.root",
                     "root://xcache//store/data/Run2017E/DoubleEG/NANOAOD/UL2017_MiniAODv2_NanoAODv9-v1/270000/E72A80F7-4A47-D749-B45C-3BE75084F849.root"
                 ],
-                "is_data": true,
-                "nevts_total": 56241190.0,
-                "year": "2017"
+                "nevts_total": 56241190.0
             }
-        }
+        },
+        "year": "2017"
     },
     "DoubleEG_F-HIPM_UL2016": {
+        "is_data": true,
         "variations": {
             "nominal": {
                 "files": [
@@ -1214,13 +1215,13 @@
                     "root://xcache//store/data/Run2016F/DoubleEG/NANOAOD/HIPM_UL2016_MiniAODv2_NanoAODv9-v2/40000/F893485F-E9B7-3A47-86BA-999E484A765A.root",
                     "root://xcache//store/data/Run2016F/DoubleEG/NANOAOD/HIPM_UL2016_MiniAODv2_NanoAODv9-v2/50000/7E824890-B317-3B49-B4D3-6C5CA9A98E62.root"
                 ],
-                "is_data": true,
-                "nevts_total": 30216940.0,
-                "year": "2016APV"
+                "nevts_total": 30216940.0
             }
-        }
+        },
+        "year": "2016APV"
     },
     "DoubleEG_F-UL2016": {
+        "is_data": true,
         "variations": {
             "nominal": {
                 "files": [
@@ -1230,13 +1231,13 @@
                     "root://xcache//store/data/Run2016F/DoubleEG/NANOAOD/UL2016_MiniAODv2_NanoAODv9-v1/70000/CB3C8BA9-F3A2-8849-B8E4-BA01887C310F.root",
                     "root://xcache//store/data/Run2016F/DoubleEG/NANOAOD/UL2016_MiniAODv2_NanoAODv9-v1/70000/DFA1C823-C1B0-1447-A17B-4DC921C92F1C.root"
                 ],
-                "is_data": true,
-                "nevts_total": 4360689.0,
-                "year": "2016"
+                "nevts_total": 4360689.0
             }
-        }
+        },
+        "year": "2016"
     },
     "DoubleEG_F-UL2017": {
+        "is_data": true,
         "variations": {
             "nominal": {
                 "files": [
@@ -1295,13 +1296,13 @@
                     "root://xcache//store/data/Run2017F/DoubleEG/NANOAOD/UL2017_MiniAODv2_NanoAODv9-v1/70000/61B08DB4-292E-734A-B082-E56243B5365A.root",
                     "root://xcache//store/data/Run2017F/DoubleEG/NANOAOD/UL2017_MiniAODv2_NanoAODv9-v1/710000/E0416E7B-3364-D64D-910A-E83496BCD1EF.root"
                 ],
-                "is_data": true,
-                "nevts_total": 74265012.0,
-                "year": "2017"
+                "nevts_total": 74265012.0
             }
-        }
+        },
+        "year": "2017"
     },
     "DoubleEG_G-UL2016": {
+        "is_data": true,
         "variations": {
             "nominal": {
                 "files": [
@@ -1353,13 +1354,13 @@
                     "root://xcache//store/data/Run2016G/DoubleEG/NANOAOD/UL2016_MiniAODv2_NanoAODv9-v1/250000/E353F511-F565-2443-B67C-40D0C3235AC8.root",
                     "root://xcache//store/data/Run2016G/DoubleEG/NANOAOD/UL2016_MiniAODv2_NanoAODv9-v1/250000/ECA6DDD9-3AA8-8C45-B36A-F86B53F4F2DF.root"
                 ],
-                "is_data": true,
-                "nevts_total": 78797031.0,
-                "year": "2016"
+                "nevts_total": 78797031.0
             }
-        }
+        },
+        "year": "2016"
     },
     "DoubleEG_H-UL2016": {
+        "is_data": true,
         "variations": {
             "nominal": {
                 "files": [
@@ -1450,13 +1451,13 @@
                     "root://xcache//store/data/Run2016H/DoubleEG/NANOAOD/UL2016_MiniAODv2_NanoAODv9-v1/260000/FC154FFB-F26D-5F4A-AAF5-045CF105D974.root",
                     "root://xcache//store/data/Run2016H/DoubleEG/NANOAOD/UL2016_MiniAODv2_NanoAODv9-v1/260000/FC1ECF3C-83C1-394B-A69B-9BFB47A1BA61.root"
                 ],
-                "is_data": true,
-                "nevts_total": 85388673.0,
-                "year": "2016"
+                "nevts_total": 85388673.0
             }
-        }
+        },
+        "year": "2016"
     },
     "DoubleMuon_A-UL2018": {
+        "is_data": true,
         "variations": {
             "nominal": {
                 "files": [
@@ -1515,13 +1516,13 @@
                     "root://xcache//store/data/Run2018A/DoubleMuon/NANOAOD/UL2018_MiniAODv2_NanoAODv9-v1/270000/FE922052-95CC-304A-83D3-F3E1D222B051.root",
                     "root://xcache//store/data/Run2018A/DoubleMuon/NANOAOD/UL2018_MiniAODv2_NanoAODv9-v1/270000/FED197E8-6771-EB4E-BA3D-D6AC57263DC0.root"
                 ],
-                "is_data": true,
-                "nevts_total": 75491789.0,
-                "year": "2018"
+                "nevts_total": 75491789.0
             }
-        }
+        },
+        "year": "2018"
     },
     "DoubleMuon_B-UL2017": {
+        "is_data": true,
         "variations": {
             "nominal": {
                 "files": [
@@ -1534,13 +1535,13 @@
                     "root://xcache//store/data/Run2017B/DoubleMuon/NANOAOD/UL2017_MiniAODv2_NanoAODv9-v1/120000/AB770B30-F662-C244-A8FC-52C189E5DF66.root",
                     "root://xcache//store/data/Run2017B/DoubleMuon/NANOAOD/UL2017_MiniAODv2_NanoAODv9-v1/280000/10AE822E-7D57-2244-B31F-FFB818DB9742.root"
                 ],
-                "is_data": true,
-                "nevts_total": 14501767.0,
-                "year": "2017"
+                "nevts_total": 14501767.0
             }
-        }
+        },
+        "year": "2017"
     },
     "DoubleMuon_B-UL2018": {
+        "is_data": true,
         "variations": {
             "nominal": {
                 "files": [
@@ -1565,13 +1566,13 @@
                     "root://xcache//store/data/Run2018B/DoubleMuon/NANOAOD/UL2018_MiniAODv2_NanoAODv9-v1/270000/DF04EA1A-CC93-6A44-89D2-BCCB80F34A4E.root",
                     "root://xcache//store/data/Run2018B/DoubleMuon/NANOAOD/UL2018_MiniAODv2_NanoAODv9-v1/270000/E4B29848-0954-CA48-9123-9966DDE62D9A.root"
                 ],
-                "is_data": true,
-                "nevts_total": 35057758.0,
-                "year": "2018"
+                "nevts_total": 35057758.0
             }
-        }
+        },
+        "year": "2018"
     },
     "DoubleMuon_B-ver1_HIPM_UL2016": {
+        "is_data": true,
         "variations": {
             "nominal": {
                 "files": [
@@ -1579,13 +1580,13 @@
                     "root://xcache//store/data/Run2016B/DoubleMuon/NANOAOD/ver1_HIPM_UL2016_MiniAODv2_NanoAODv9-v2/2530000/1F1718FA-6278-FB4C-AA8A-074BD7FB7BAD.root",
                     "root://xcache//store/data/Run2016B/DoubleMuon/NANOAOD/ver1_HIPM_UL2016_MiniAODv2_NanoAODv9-v2/2530000/99DA5C1C-381D-0C4C-8A72-3126C0B5B642.root"
                 ],
-                "is_data": true,
-                "nevts_total": 4199947.0,
-                "year": "2016APV"
+                "nevts_total": 4199947.0
             }
-        }
+        },
+        "year": "2016APV"
     },
     "DoubleMuon_B-ver2_HIPM_UL2016": {
+        "is_data": true,
         "variations": {
             "nominal": {
                 "files": [
@@ -1629,13 +1630,13 @@
                     "root://xcache//store/data/Run2016B/DoubleMuon/NANOAOD/ver2_HIPM_UL2016_MiniAODv2_NanoAODv9-v2/40000/DD427455-685E-C341-84C5-407027025958.root",
                     "root://xcache//store/data/Run2016B/DoubleMuon/NANOAOD/ver2_HIPM_UL2016_MiniAODv2_NanoAODv9-v2/40000/EE08091D-954A-8740-ABF5-5BD72D1D602B.root"
                 ],
-                "is_data": true,
-                "nevts_total": 82535526.0,
-                "year": "2016APV"
+                "nevts_total": 82535526.0
             }
-        }
+        },
+        "year": "2016APV"
     },
     "DoubleMuon_C-HIPM_UL2016": {
+        "is_data": true,
         "variations": {
             "nominal": {
                 "files": [
@@ -1656,13 +1657,13 @@
                     "root://xcache//store/data/Run2016C/DoubleMuon/NANOAOD/HIPM_UL2016_MiniAODv2_NanoAODv9-v2/50000/D458442C-46C6-DE4F-8144-9C22BF0F59D6.root",
                     "root://xcache//store/data/Run2016C/DoubleMuon/NANOAOD/HIPM_UL2016_MiniAODv2_NanoAODv9-v2/50000/FB3BC8A8-6B67-664C-A28D-C253719359B0.root"
                 ],
-                "is_data": true,
-                "nevts_total": 27934629.0,
-                "year": "2016APV"
+                "nevts_total": 27934629.0
             }
-        }
+        },
+        "year": "2016APV"
     },
     "DoubleMuon_C-UL2017": {
+        "is_data": true,
         "variations": {
             "nominal": {
                 "files": [
@@ -1696,13 +1697,13 @@
                     "root://xcache//store/data/Run2017C/DoubleMuon/NANOAOD/UL2017_MiniAODv2_NanoAODv9-v1/280000/9FBF77DA-08FA-3B4F-887F-162848B6D5CA.root",
                     "root://xcache//store/data/Run2017C/DoubleMuon/NANOAOD/UL2017_MiniAODv2_NanoAODv9-v1/280000/A35C7013-397D-CA43-8919-134EA5F489E1.root"
                 ],
-                "is_data": true,
-                "nevts_total": 49636525.0,
-                "year": "2017"
+                "nevts_total": 49636525.0
             }
-        }
+        },
+        "year": "2017"
     },
     "DoubleMuon_C-UL2018": {
+        "is_data": true,
         "variations": {
             "nominal": {
                 "files": [
@@ -1732,13 +1733,13 @@
                     "root://xcache//store/data/Run2018C/DoubleMuon/NANOAOD/UL2018_MiniAODv2_NanoAODv9-v1/130000/EDF162A4-F822-3547-9B51-36F7998DF0C1.root",
                     "root://xcache//store/data/Run2018C/DoubleMuon/NANOAOD/UL2018_MiniAODv2_NanoAODv9-v1/130000/FC66BB99-B6C3-6C47-97B1-2654220B4D73.root"
                 ],
-                "is_data": true,
-                "nevts_total": 34565869.0,
-                "year": "2018"
+                "nevts_total": 34565869.0
             }
-        }
+        },
+        "year": "2018"
     },
     "DoubleMuon_D-HIPM_UL2016": {
+        "is_data": true,
         "variations": {
             "nominal": {
                 "files": [
@@ -1765,13 +1766,13 @@
                     "root://xcache//store/data/Run2016D/DoubleMuon/NANOAOD/HIPM_UL2016_MiniAODv2_NanoAODv9-v2/50000/F6858F81-11EE-4647-B9C3-BEA6FC076DA1.root",
                     "root://xcache//store/data/Run2016D/DoubleMuon/NANOAOD/HIPM_UL2016_MiniAODv2_NanoAODv9-v2/50000/FBD43CEF-B7EA-3D47-8803-35E739C316D9.root"
                 ],
-                "is_data": true,
-                "nevts_total": 33861745.0,
-                "year": "2016APV"
+                "nevts_total": 33861745.0
             }
-        }
+        },
+        "year": "2016APV"
     },
     "DoubleMuon_D-UL2017": {
+        "is_data": true,
         "variations": {
             "nominal": {
                 "files": [
@@ -1792,13 +1793,13 @@
                     "root://xcache//store/data/Run2017D/DoubleMuon/NANOAOD/UL2017_MiniAODv2_NanoAODv9-v1/70000/ACFA3E14-3146-9847-8912-C0C0A2B36619.root",
                     "root://xcache//store/data/Run2017D/DoubleMuon/NANOAOD/UL2017_MiniAODv2_NanoAODv9-v1/70000/E96239F5-3E74-2544-B0CF-804D466641AE.root"
                 ],
-                "is_data": true,
-                "nevts_total": 23075733.0,
-                "year": "2017"
+                "nevts_total": 23075733.0
             }
-        }
+        },
+        "year": "2017"
     },
     "DoubleMuon_D-UL2018": {
+        "is_data": true,
         "variations": {
             "nominal": {
                 "files": [
@@ -1910,13 +1911,13 @@
                     "root://xcache//store/data/Run2018D/DoubleMuon/NANOAOD/UL2018_MiniAODv2_NanoAODv9-v2/2430000/FF3E23D9-E085-4944-A9F7-D2BD5B7A74B9.root",
                     "root://xcache//store/data/Run2018D/DoubleMuon/NANOAOD/UL2018_MiniAODv2_NanoAODv9-v2/2430000/FFB88652-054D-E443-87BF-6DA38C2AFF26.root"
                 ],
-                "is_data": true,
-                "nevts_total": 168600679.0,
-                "year": "2018"
+                "nevts_total": 168600679.0
             }
-        }
+        },
+        "year": "2018"
     },
     "DoubleMuon_E-HIPM_UL2016": {
+        "is_data": true,
         "variations": {
             "nominal": {
                 "files": [
@@ -1940,13 +1941,13 @@
                     "root://xcache//store/data/Run2016E/DoubleMuon/NANOAOD/HIPM_UL2016_MiniAODv2_NanoAODv9-v2/40000/733E42CA-49A1-8A4B-984D-7C0899A4EF2E.root",
                     "root://xcache//store/data/Run2016E/DoubleMuon/NANOAOD/HIPM_UL2016_MiniAODv2_NanoAODv9-v2/40000/7DF61523-B91D-C84D-A649-7E4EE8B0450D.root"
                 ],
-                "is_data": true,
-                "nevts_total": 28246946.0,
-                "year": "2016APV"
+                "nevts_total": 28246946.0
             }
-        }
+        },
+        "year": "2016APV"
     },
     "DoubleMuon_E-UL2017": {
+        "is_data": true,
         "variations": {
             "nominal": {
                 "files": [
@@ -1985,13 +1986,13 @@
                     "root://xcache//store/data/Run2017E/DoubleMuon/NANOAOD/UL2017_MiniAODv2_NanoAODv9-v1/270000/D725CAE9-D381-844A-AEE1-F3DC190544F3.root",
                     "root://xcache//store/data/Run2017E/DoubleMuon/NANOAOD/UL2017_MiniAODv2_NanoAODv9-v1/270000/DCD85995-340A-8948-B5CB-2B1AC8751D16.root"
                 ],
-                "is_data": true,
-                "nevts_total": 51531477.0,
-                "year": "2017"
+                "nevts_total": 51531477.0
             }
-        }
+        },
+        "year": "2017"
     },
     "DoubleMuon_F-HIPM_UL2016": {
+        "is_data": true,
         "variations": {
             "nominal": {
                 "files": [
@@ -2006,25 +2007,25 @@
                     "root://xcache//store/data/Run2016F/DoubleMuon/NANOAOD/HIPM_UL2016_MiniAODv2_NanoAODv9-v2/2520000/EBB2695D-EBAD-FC4D-8470-7BA7EC56108F.root",
                     "root://xcache//store/data/Run2016F/DoubleMuon/NANOAOD/HIPM_UL2016_MiniAODv2_NanoAODv9-v2/2520000/F11738DD-3FD2-164F-BEF4-A6750607C3C5.root"
                 ],
-                "is_data": true,
-                "nevts_total": 17900759.0,
-                "year": "2016APV"
+                "nevts_total": 17900759.0
             }
-        }
+        },
+        "year": "2016APV"
     },
     "DoubleMuon_F-UL2016": {
+        "is_data": true,
         "variations": {
             "nominal": {
                 "files": [
                     "root://xcache//store/data/Run2016F/DoubleMuon/NANOAOD/UL2016_MiniAODv2_NanoAODv9-v1/120000/E6EF2FBB-676E-A447-B572-B575EDB3CC1C.root"
                 ],
-                "is_data": true,
-                "nevts_total": 2429162.0,
-                "year": "2016"
+                "nevts_total": 2429162.0
             }
-        }
+        },
+        "year": "2016"
     },
     "DoubleMuon_F-UL2017": {
+        "is_data": true,
         "variations": {
             "nominal": {
                 "files": [
@@ -2089,13 +2090,13 @@
                     "root://xcache//store/data/Run2017F/DoubleMuon/NANOAOD/UL2017_MiniAODv2_NanoAODv9-v1/120000/ECB88C12-076B-D947-920B-89F914801B2A.root",
                     "root://xcache//store/data/Run2017F/DoubleMuon/NANOAOD/UL2017_MiniAODv2_NanoAODv9-v1/120000/F369A309-E4D4-FA45-B7BD-02C46C1178F0.root"
                 ],
-                "is_data": true,
-                "nevts_total": 79756560.0,
-                "year": "2017"
+                "nevts_total": 79756560.0
             }
-        }
+        },
+        "year": "2017"
     },
     "DoubleMuon_G-UL2016": {
+        "is_data": true,
         "variations": {
             "nominal": {
                 "files": [
@@ -2129,13 +2130,13 @@
                     "root://xcache//store/data/Run2016G/DoubleMuon/NANOAOD/UL2016_MiniAODv2_NanoAODv9-v2/2430000/F1D0DAC7-256C-0E47-AA8E-679FBAA2E47D.root",
                     "root://xcache//store/data/Run2016G/DoubleMuon/NANOAOD/UL2016_MiniAODv2_NanoAODv9-v2/2430000/F20C428E-C7D7-BB46-BA0F-BCB31B79F1AC.root"
                 ],
-                "is_data": true,
-                "nevts_total": 45235604.0,
-                "year": "2016"
+                "nevts_total": 45235604.0
             }
-        }
+        },
+        "year": "2016"
     },
     "DoubleMuon_H-UL2016": {
+        "is_data": true,
         "variations": {
             "nominal": {
                 "files": [
@@ -2168,13 +2169,13 @@
                     "root://xcache//store/data/Run2016H/DoubleMuon/NANOAOD/UL2016_MiniAODv2_NanoAODv9-v1/2510000/EEB2FE3F-7CF3-BF4A-9F70-3F89FACE698E.root",
                     "root://xcache//store/data/Run2016H/DoubleMuon/NANOAOD/UL2016_MiniAODv2_NanoAODv9-v1/2510000/F5E234F9-1E9C-0042-B395-AB6407E4A336.root"
                 ],
-                "is_data": true,
-                "nevts_total": 48912812.0,
-                "year": "2016"
+                "nevts_total": 48912812.0
             }
-        }
+        },
+        "year": "2016"
     },
     "EGamma_A-UL2018": {
+        "is_data": true,
         "variations": {
             "nominal": {
                 "files": [
@@ -2405,13 +2406,13 @@
                     "root://xcache//store/data/Run2018A/EGamma/NANOAOD/UL2018_MiniAODv2_NanoAODv9-v1/270000/FF0211CD-9151-8D41-9BDA-DE13EE0E3C35.root",
                     "root://xcache//store/data/Run2018A/EGamma/NANOAOD/UL2018_MiniAODv2_NanoAODv9-v1/70000/79C57B8F-B2E1-E245-9F19-D8ADF3285CF7.root"
                 ],
-                "is_data": true,
-                "nevts_total": 339013231.0,
-                "year": "2018"
+                "nevts_total": 339013231.0
             }
-        }
+        },
+        "year": "2018"
     },
     "EGamma_B-UL2018": {
+        "is_data": true,
         "variations": {
             "nominal": {
                 "files": [
@@ -2490,13 +2491,13 @@
                     "root://xcache//store/data/Run2018B/EGamma/NANOAOD/UL2018_MiniAODv2_NanoAODv9-v1/280000/F47C8D36-8970-1A44-B7B7-A6205CDF99FE.root",
                     "root://xcache//store/data/Run2018B/EGamma/NANOAOD/UL2018_MiniAODv2_NanoAODv9-v1/280000/F8D9B751-AB28-5048-B62C-75767A5797D2.root"
                 ],
-                "is_data": true,
-                "nevts_total": 153792795.0,
-                "year": "2018"
+                "nevts_total": 153792795.0
             }
-        }
+        },
+        "year": "2018"
     },
     "EGamma_C-UL2018": {
+        "is_data": true,
         "variations": {
             "nominal": {
                 "files": [
@@ -2584,13 +2585,13 @@
                     "root://xcache//store/data/Run2018C/EGamma/NANOAOD/UL2018_MiniAODv2_NanoAODv9-v1/70000/FA812A91-940D-A344-A35A-B74E6F9F1A86.root",
                     "root://xcache//store/data/Run2018C/EGamma/NANOAOD/UL2018_MiniAODv2_NanoAODv9-v1/70000/FB5E1214-0CE8-5640-A631-C519E024FB58.root"
                 ],
-                "is_data": true,
-                "nevts_total": 147827904.0,
-                "year": "2018"
+                "nevts_total": 147827904.0
             }
-        }
+        },
+        "year": "2018"
     },
     "EGamma_D-UL2018": {
+        "is_data": true,
         "variations": {
             "nominal": {
                 "files": [
@@ -2950,13 +2951,13 @@
                     "root://xcache//store/data/Run2018D/EGamma/NANOAOD/UL2018_MiniAODv2_NanoAODv9-v3/260000/8E8633F7-F33C-8741-B67E-FFA93FCFBA25.root",
                     "root://xcache//store/data/Run2018D/EGamma/NANOAOD/UL2018_MiniAODv2_NanoAODv9-v3/260000/A39A993D-0218-8140-8BDB-3382DB6D36AA.root"
                 ],
-                "is_data": true,
-                "nevts_total": 752524583.0,
-                "year": "2018"
+                "nevts_total": 752524583.0
             }
-        }
+        },
+        "year": "2018"
     },
     "MuonEG_A-UL2018": {
+        "is_data": true,
         "variations": {
             "nominal": {
                 "files": [
@@ -2994,13 +2995,13 @@
                     "root://xcache//store/data/Run2018A/MuonEG/NANOAOD/UL2018_MiniAODv2_NanoAODv9-v1/280000/E037F4CD-4775-B549-893E-45CF6D6981A3.root",
                     "root://xcache//store/data/Run2018A/MuonEG/NANOAOD/UL2018_MiniAODv2_NanoAODv9-v1/280000/E199D3EF-1D81-1B41-924F-70DA689BB7F5.root"
                 ],
-                "is_data": true,
-                "nevts_total": 32958503.0,
-                "year": "2018"
+                "nevts_total": 32958503.0
             }
-        }
+        },
+        "year": "2018"
     },
     "MuonEG_B-UL2017": {
+        "is_data": true,
         "variations": {
             "nominal": {
                 "files": [
@@ -3011,13 +3012,13 @@
                     "root://xcache//store/data/Run2017B/MuonEG/NANOAOD/UL2017_MiniAODv2_NanoAODv9-v1/280000/F32AA11A-6BE7-264A-AC6F-61304DCB935B.root",
                     "root://xcache//store/data/Run2017B/MuonEG/NANOAOD/UL2017_MiniAODv2_NanoAODv9-v1/280000/F41F7A39-83FF-F848-B0FC-0907212CD055.root"
                 ],
-                "is_data": true,
-                "nevts_total": 4453465.0,
-                "year": "2017"
+                "nevts_total": 4453465.0
             }
-        }
+        },
+        "year": "2017"
     },
     "MuonEG_B-UL2018": {
+        "is_data": true,
         "variations": {
             "nominal": {
                 "files": [
@@ -3042,25 +3043,25 @@
                     "root://xcache//store/data/Run2018B/MuonEG/NANOAOD/UL2018_MiniAODv2_NanoAODv9-v1/280000/F882F7FE-C3B0-CB46-B6E1-673D91C82A74.root",
                     "root://xcache//store/data/Run2018B/MuonEG/NANOAOD/UL2018_MiniAODv2_NanoAODv9-v1/280000/FFF1A445-785C-FE48-991B-0478FBD918B0.root"
                 ],
-                "is_data": true,
-                "nevts_total": 16211567.0,
-                "year": "2018"
+                "nevts_total": 16211567.0
             }
-        }
+        },
+        "year": "2018"
     },
     "MuonEG_B-ver1_HIPM_UL2016": {
+        "is_data": true,
         "variations": {
             "nominal": {
                 "files": [
                     "root://xcache//store/data/Run2016B/MuonEG/NANOAOD/ver1_HIPM_UL2016_MiniAODv2_NanoAODv9-v2/40000/35F15B35-E216-124E-AF91-281004953E9E.root"
                 ],
-                "is_data": true,
-                "nevts_total": 225271.0,
-                "year": "2016APV"
+                "nevts_total": 225271.0
             }
-        }
+        },
+        "year": "2016APV"
     },
     "MuonEG_B-ver2_HIPM_UL2016": {
+        "is_data": true,
         "variations": {
             "nominal": {
                 "files": [
@@ -3081,13 +3082,13 @@
                     "root://xcache//store/data/Run2016B/MuonEG/NANOAOD/ver2_HIPM_UL2016_MiniAODv2_NanoAODv9-v2/40000/E7428227-C0DC-2E4D-A792-0E79CC99F6F4.root",
                     "root://xcache//store/data/Run2016B/MuonEG/NANOAOD/ver2_HIPM_UL2016_MiniAODv2_NanoAODv9-v2/40000/FCC9015E-0EA4-1145-98E5-5CCFBFD54334.root"
                 ],
-                "is_data": true,
-                "nevts_total": 32727796.0,
-                "year": "2016APV"
+                "nevts_total": 32727796.0
             }
-        }
+        },
+        "year": "2016APV"
     },
     "MuonEG_C-HIPM_UL2016": {
+        "is_data": true,
         "variations": {
             "nominal": {
                 "files": [
@@ -3106,13 +3107,13 @@
                     "root://xcache//store/data/Run2016C/MuonEG/NANOAOD/HIPM_UL2016_MiniAODv2_NanoAODv9-v2/40000/F8F1B74C-3C7B-5047-953D-CE54A7C1239F.root",
                     "root://xcache//store/data/Run2016C/MuonEG/NANOAOD/HIPM_UL2016_MiniAODv2_NanoAODv9-v2/40000/FADE7E1D-24B8-204A-A7BC-29DFC7CA61B6.root"
                 ],
-                "is_data": true,
-                "nevts_total": 15405678.0,
-                "year": "2016APV"
+                "nevts_total": 15405678.0
             }
-        }
+        },
+        "year": "2016APV"
     },
     "MuonEG_C-UL2017": {
+        "is_data": true,
         "variations": {
             "nominal": {
                 "files": [
@@ -3134,13 +3135,13 @@
                     "root://xcache//store/data/Run2017C/MuonEG/NANOAOD/UL2017_MiniAODv2_NanoAODv9-v1/280000/E6D30734-B86B-F24F-B1ED-2829DC332260.root",
                     "root://xcache//store/data/Run2017C/MuonEG/NANOAOD/UL2017_MiniAODv2_NanoAODv9-v1/280000/FA10F632-5411-A14B-8220-1122C8BBA704.root"
                 ],
-                "is_data": true,
-                "nevts_total": 15595214.0,
-                "year": "2017"
+                "nevts_total": 15595214.0
             }
-        }
+        },
+        "year": "2017"
     },
     "MuonEG_C-UL2018": {
+        "is_data": true,
         "variations": {
             "nominal": {
                 "files": [
@@ -3167,13 +3168,13 @@
                     "root://xcache//store/data/Run2018C/MuonEG/NANOAOD/UL2018_MiniAODv2_NanoAODv9-v1/70000/EB018EE9-228D-A94A-ADD3-FBE1CD4178B5.root",
                     "root://xcache//store/data/Run2018C/MuonEG/NANOAOD/UL2018_MiniAODv2_NanoAODv9-v1/70000/ED8A751E-7FE7-6B45-B201-761C8FADA2B1.root"
                 ],
-                "is_data": true,
-                "nevts_total": 15652198.0,
-                "year": "2018"
+                "nevts_total": 15652198.0
             }
-        }
+        },
+        "year": "2018"
     },
     "MuonEG_D-HIPM_UL2016": {
+        "is_data": true,
         "variations": {
             "nominal": {
                 "files": [
@@ -3195,13 +3196,13 @@
                     "root://xcache//store/data/Run2016D/MuonEG/NANOAOD/HIPM_UL2016_MiniAODv2_NanoAODv9-v2/50000/D3E0FB8E-1953-2B41-8E3E-51EFE9136721.root",
                     "root://xcache//store/data/Run2016D/MuonEG/NANOAOD/HIPM_UL2016_MiniAODv2_NanoAODv9-v2/50000/DA4BB352-ACDF-1847-A483-7265EFEEBC97.root"
                 ],
-                "is_data": true,
-                "nevts_total": 23482352.0,
-                "year": "2016APV"
+                "nevts_total": 23482352.0
             }
-        }
+        },
+        "year": "2016APV"
     },
     "MuonEG_D-UL2017": {
+        "is_data": true,
         "variations": {
             "nominal": {
                 "files": [
@@ -3219,13 +3220,13 @@
                     "root://xcache//store/data/Run2017D/MuonEG/NANOAOD/UL2017_MiniAODv2_NanoAODv9-v1/280000/DF9B5882-99A5-B94B-B349-0A2B08E5D8CB.root",
                     "root://xcache//store/data/Run2017D/MuonEG/NANOAOD/UL2017_MiniAODv2_NanoAODv9-v1/280000/F76773E5-7621-9544-BF40-D761CBE7B19E.root"
                 ],
-                "is_data": true,
-                "nevts_total": 9164365.0,
-                "year": "2017"
+                "nevts_total": 9164365.0
             }
-        }
+        },
+        "year": "2017"
     },
     "MuonEG_D-UL2018": {
+        "is_data": true,
         "variations": {
             "nominal": {
                 "files": [
@@ -3293,13 +3294,13 @@
                     "root://xcache//store/data/Run2018D/MuonEG/NANOAOD/UL2018_MiniAODv2_NanoAODv9-v1/280000/EDBCAE30-7906-174C-8016-CBD0DA8B0849.root",
                     "root://xcache//store/data/Run2018D/MuonEG/NANOAOD/UL2018_MiniAODv2_NanoAODv9-v1/280000/F8FA8043-B904-0C49-977E-13282C4A36FC.root"
                 ],
-                "is_data": true,
-                "nevts_total": 71952025.0,
-                "year": "2018"
+                "nevts_total": 71952025.0
             }
-        }
+        },
+        "year": "2018"
     },
     "MuonEG_E-HIPM_UL2016": {
+        "is_data": true,
         "variations": {
             "nominal": {
                 "files": [
@@ -3320,13 +3321,13 @@
                     "root://xcache//store/data/Run2016E/MuonEG/NANOAOD/HIPM_UL2016_MiniAODv2_NanoAODv9-v2/2430000/DFC3FD27-6604-2949-A235-1BA13DDB738E.root",
                     "root://xcache//store/data/Run2016E/MuonEG/NANOAOD/HIPM_UL2016_MiniAODv2_NanoAODv9-v2/2520000/5DD8C7CC-0C4A-F146-8422-74177344AD83.root"
                 ],
-                "is_data": true,
-                "nevts_total": 22519303.0,
-                "year": "2016APV"
+                "nevts_total": 22519303.0
             }
-        }
+        },
+        "year": "2016APV"
     },
     "MuonEG_E-UL2017": {
+        "is_data": true,
         "variations": {
             "nominal": {
                 "files": [
@@ -3346,13 +3347,13 @@
                     "root://xcache//store/data/Run2017E/MuonEG/NANOAOD/UL2017_MiniAODv2_NanoAODv9-v1/280000/E1B7163F-7656-9C44-8520-97C4171C5B8C.root",
                     "root://xcache//store/data/Run2017E/MuonEG/NANOAOD/UL2017_MiniAODv2_NanoAODv9-v1/280000/E6EA7DCD-47BA-BC48-8ED4-1237523C16BE.root"
                 ],
-                "is_data": true,
-                "nevts_total": 19043421.0,
-                "year": "2017"
+                "nevts_total": 19043421.0
             }
-        }
+        },
+        "year": "2017"
     },
     "MuonEG_F-HIPM_UL2016": {
+        "is_data": true,
         "variations": {
             "nominal": {
                 "files": [
@@ -3371,13 +3372,13 @@
                     "root://xcache//store/data/Run2016F/MuonEG/NANOAOD/HIPM_UL2016_MiniAODv2_NanoAODv9-v2/2520000/C5E2A1D2-F9CD-7941-B82A-30C455B2346A.root",
                     "root://xcache//store/data/Run2016F/MuonEG/NANOAOD/HIPM_UL2016_MiniAODv2_NanoAODv9-v2/2520000/D2652656-7B82-CE4E-8399-23FB3BA322E1.root"
                 ],
-                "is_data": true,
-                "nevts_total": 14100826.0,
-                "year": "2016APV"
+                "nevts_total": 14100826.0
             }
-        }
+        },
+        "year": "2016APV"
     },
     "MuonEG_F-UL2016": {
+        "is_data": true,
         "variations": {
             "nominal": {
                 "files": [
@@ -3385,13 +3386,13 @@
                     "root://xcache//store/data/Run2016F/MuonEG/NANOAOD/UL2016_MiniAODv2_NanoAODv9-v1/70000/095451EB-8FB1-E748-9FFA-07A22EFDF296.root",
                     "root://xcache//store/data/Run2016F/MuonEG/NANOAOD/UL2016_MiniAODv2_NanoAODv9-v1/70000/A8BA422B-F2BB-FB44-9AA3-BCC2080666BE.root"
                 ],
-                "is_data": true,
-                "nevts_total": 1901339.0,
-                "year": "2016"
+                "nevts_total": 1901339.0
             }
-        }
+        },
+        "year": "2016"
     },
     "MuonEG_F-UL2017": {
+        "is_data": true,
         "variations": {
             "nominal": {
                 "files": [
@@ -3419,13 +3420,13 @@
                     "root://xcache//store/data/Run2017F/MuonEG/NANOAOD/UL2017_MiniAODv2_NanoAODv9-v1/70000/D8FBECFF-AF5A-4549-94E3-73E2606B1958.root",
                     "root://xcache//store/data/Run2017F/MuonEG/NANOAOD/UL2017_MiniAODv2_NanoAODv9-v1/70000/FB074CED-EA34-8B4B-B7C3-66060C8037EE.root"
                 ],
-                "is_data": true,
-                "nevts_total": 25776363.0,
-                "year": "2017"
+                "nevts_total": 25776363.0
             }
-        }
+        },
+        "year": "2017"
     },
     "MuonEG_G-UL2016": {
+        "is_data": true,
         "variations": {
             "nominal": {
                 "files": [
@@ -3459,13 +3460,13 @@
                     "root://xcache//store/data/Run2016G/MuonEG/NANOAOD/UL2016_MiniAODv2_NanoAODv9-v1/70000/FD1265DB-83E7-2B40-BC96-E79973AB3379.root",
                     "root://xcache//store/data/Run2016G/MuonEG/NANOAOD/UL2016_MiniAODv2_NanoAODv9-v1/70000/FE49F68D-9F24-D94F-BD2C-21C5FF697D7B.root"
                 ],
-                "is_data": true,
-                "nevts_total": 33854612.0,
-                "year": "2016"
+                "nevts_total": 33854612.0
             }
-        }
+        },
+        "year": "2016"
     },
     "MuonEG_H-UL2016": {
+        "is_data": true,
         "variations": {
             "nominal": {
                 "files": [
@@ -3489,13 +3490,13 @@
                     "root://xcache//store/data/Run2016H/MuonEG/NANOAOD/UL2016_MiniAODv2_NanoAODv9-v1/70000/934610B3-12B4-3D43-8646-A32259D32633.root",
                     "root://xcache//store/data/Run2016H/MuonEG/NANOAOD/UL2016_MiniAODv2_NanoAODv9-v1/70000/F9C9DE55-BF82-C146-A686-212C1731C11C.root"
                 ],
-                "is_data": true,
-                "nevts_total": 29236516.0,
-                "year": "2016"
+                "nevts_total": 29236516.0
             }
-        }
+        },
+        "year": "2016"
     },
     "SingleElectron_B-UL2017": {
+        "is_data": true,
         "variations": {
             "nominal": {
                 "files": [
@@ -3532,25 +3533,25 @@
                     "root://xcache//store/data/Run2017B/SingleElectron/NANOAOD/UL2017_MiniAODv2_NanoAODv9-v1/70000/DE3DCD5F-0ED5-1442-BF14-16B7F0E449C8.root",
                     "root://xcache//store/data/Run2017B/SingleElectron/NANOAOD/UL2017_MiniAODv2_NanoAODv9-v1/70000/FB58E5D3-9D64-524A-AFE6-BC804B2225A0.root"
                 ],
-                "is_data": true,
-                "nevts_total": 60537490.0,
-                "year": "2017"
+                "nevts_total": 60537490.0
             }
-        }
+        },
+        "year": "2017"
     },
     "SingleElectron_B-ver1_HIPM_UL2016": {
+        "is_data": true,
         "variations": {
             "nominal": {
                 "files": [
                     "root://xcache//store/data/Run2016B/SingleElectron/NANOAOD/ver1_HIPM_UL2016_MiniAODv2_NanoAODv9-v2/2430000/E5D40CC6-421E-4D4F-B994-86EE04118865.root"
                 ],
-                "is_data": true,
-                "nevts_total": 1422819.0,
-                "year": "2016APV"
+                "nevts_total": 1422819.0
             }
-        }
+        },
+        "year": "2016APV"
     },
     "SingleElectron_B-ver2_HIPM_UL2016": {
+        "is_data": true,
         "variations": {
             "nominal": {
                 "files": [
@@ -3661,13 +3662,13 @@
                     "root://xcache//store/data/Run2016B/SingleElectron/NANOAOD/ver2_HIPM_UL2016_MiniAODv2_NanoAODv9-v2/50000/FAA374A0-A189-0E46-9F1F-0850EDBF1CF0.root",
                     "root://xcache//store/data/Run2016B/SingleElectron/NANOAOD/ver2_HIPM_UL2016_MiniAODv2_NanoAODv9-v2/50000/FEAA65B2-F55A-5746-9AB7-38EF38679FA8.root"
                 ],
-                "is_data": true,
-                "nevts_total": 246440440.0,
-                "year": "2016APV"
+                "nevts_total": 246440440.0
             }
-        }
+        },
+        "year": "2016APV"
     },
     "SingleElectron_C-HIPM_UL2016": {
+        "is_data": true,
         "variations": {
             "nominal": {
                 "files": [
@@ -3721,13 +3722,13 @@
                     "root://xcache//store/data/Run2016C/SingleElectron/NANOAOD/HIPM_UL2016_MiniAODv2_NanoAODv9-v2/40000/F5324CC9-BC27-8442-A323-71CA62066A06.root",
                     "root://xcache//store/data/Run2016C/SingleElectron/NANOAOD/HIPM_UL2016_MiniAODv2_NanoAODv9-v2/40000/FBDA2AD7-C77B-9B4F-9A7E-74FF5589D460.root"
                 ],
-                "is_data": true,
-                "nevts_total": 97259854.0,
-                "year": "2016APV"
+                "nevts_total": 97259854.0
             }
-        }
+        },
+        "year": "2016APV"
     },
     "SingleElectron_C-UL2017": {
+        "is_data": true,
         "variations": {
             "nominal": {
                 "files": [
@@ -3791,13 +3792,13 @@
                     "root://xcache//store/data/Run2017C/SingleElectron/NANOAOD/UL2017_MiniAODv2_NanoAODv9-v1/70000/9789736F-CC23-8E45-8A7B-7BD4591288F4.root",
                     "root://xcache//store/data/Run2017C/SingleElectron/NANOAOD/UL2017_MiniAODv2_NanoAODv9-v1/70000/A54B350F-62F6-7942-B1A3-BB58276EDFCC.root"
                 ],
-                "is_data": true,
-                "nevts_total": 136637888.0,
-                "year": "2017"
+                "nevts_total": 136637888.0
             }
-        }
+        },
+        "year": "2017"
     },
     "SingleElectron_D-HIPM_UL2016": {
+        "is_data": true,
         "variations": {
             "nominal": {
                 "files": [
@@ -3868,13 +3869,13 @@
                     "root://xcache//store/data/Run2016D/SingleElectron/NANOAOD/HIPM_UL2016_MiniAODv2_NanoAODv9-v2/2530000/FE06C536-9264-0245-B968-0281601EAC09.root",
                     "root://xcache//store/data/Run2016D/SingleElectron/NANOAOD/HIPM_UL2016_MiniAODv2_NanoAODv9-v2/2530000/FFD14E21-FF7C-5D4F-9B72-DC812D088891.root"
                 ],
-                "is_data": true,
-                "nevts_total": 148167727.0,
-                "year": "2016APV"
+                "nevts_total": 148167727.0
             }
-        }
+        },
+        "year": "2016APV"
     },
     "SingleElectron_D-UL2017": {
+        "is_data": true,
         "variations": {
             "nominal": {
                 "files": [
@@ -3916,13 +3917,13 @@
                     "root://xcache//store/data/Run2017D/SingleElectron/NANOAOD/UL2017_MiniAODv2_NanoAODv9-v1/270000/D7D1A5E4-EBBF-F64A-9F7E-92300BD435CD.root",
                     "root://xcache//store/data/Run2017D/SingleElectron/NANOAOD/UL2017_MiniAODv2_NanoAODv9-v1/270000/FB87710A-CF14-E440-8840-791CDF4DD59A.root"
                 ],
-                "is_data": true,
-                "nevts_total": 51512837.0,
-                "year": "2017"
+                "nevts_total": 51512837.0
             }
-        }
+        },
+        "year": "2017"
     },
     "SingleElectron_E-HIPM_UL2016": {
+        "is_data": true,
         "variations": {
             "nominal": {
                 "files": [
@@ -4000,13 +4001,13 @@
                     "root://xcache//store/data/Run2016E/SingleElectron/NANOAOD/HIPM_UL2016_MiniAODv2_NanoAODv9-v2/2530000/DC62916C-3B55-A044-AFAD-C57D5E894DB2.root",
                     "root://xcache//store/data/Run2016E/SingleElectron/NANOAOD/HIPM_UL2016_MiniAODv2_NanoAODv9-v2/2530000/FD6F0E96-5584-FE42-BB81-7630FB579B57.root"
                 ],
-                "is_data": true,
-                "nevts_total": 117269446.0,
-                "year": "2016APV"
+                "nevts_total": 117269446.0
             }
-        }
+        },
+        "year": "2016APV"
     },
     "SingleElectron_E-UL2017": {
+        "is_data": true,
         "variations": {
             "nominal": {
                 "files": [
@@ -4062,13 +4063,13 @@
                     "root://xcache//store/data/Run2017E/SingleElectron/NANOAOD/UL2017_MiniAODv2_NanoAODv9-v1/280000/DC8AD694-C3DB-6D41-85A2-8BA2B8B933B7.root",
                     "root://xcache//store/data/Run2017E/SingleElectron/NANOAOD/UL2017_MiniAODv2_NanoAODv9-v1/280000/FE0DB6C8-5578-B34D-B15E-4C9E1BEECC17.root"
                 ],
-                "is_data": true,
-                "nevts_total": 102122055.0,
-                "year": "2017"
+                "nevts_total": 102122055.0
             }
-        }
+        },
+        "year": "2017"
     },
     "SingleElectron_F-HIPM_UL2016": {
+        "is_data": true,
         "variations": {
             "nominal": {
                 "files": [
@@ -4113,13 +4114,13 @@
                     "root://xcache//store/data/Run2016F/SingleElectron/NANOAOD/HIPM_UL2016_MiniAODv2_NanoAODv9-v2/40000/E8A7EF7D-99BA-DC4E-ABC6-6ED86B36B666.root",
                     "root://xcache//store/data/Run2016F/SingleElectron/NANOAOD/HIPM_UL2016_MiniAODv2_NanoAODv9-v2/40000/F7E07DE8-666C-B74B-99A1-68C432ED1705.root"
                 ],
-                "is_data": true,
-                "nevts_total": 61735326.0,
-                "year": "2016APV"
+                "nevts_total": 61735326.0
             }
-        }
+        },
+        "year": "2016APV"
     },
     "SingleElectron_F-UL2016": {
+        "is_data": true,
         "variations": {
             "nominal": {
                 "files": [
@@ -4129,13 +4130,13 @@
                     "root://xcache//store/data/Run2016F/SingleElectron/NANOAOD/UL2016_MiniAODv2_NanoAODv9-v1/130000/5FC6D4C8-7C25-0D4B-9802-C89AA5F298AA.root",
                     "root://xcache//store/data/Run2016F/SingleElectron/NANOAOD/UL2016_MiniAODv2_NanoAODv9-v1/130000/A087F674-68BF-AF45-8E15-CCC6028B2576.root"
                 ],
-                "is_data": true,
-                "nevts_total": 8858206.0,
-                "year": "2016"
+                "nevts_total": 8858206.0
             }
-        }
+        },
+        "year": "2016"
     },
     "SingleElectron_F-UL2017": {
+        "is_data": true,
         "variations": {
             "nominal": {
                 "files": [
@@ -4206,13 +4207,13 @@
                     "root://xcache//store/data/Run2017F/SingleElectron/NANOAOD/UL2017_MiniAODv2_NanoAODv9-v1/70000/D6930A1F-E21C-B54E-9B28-39D52FDA11AE.root",
                     "root://xcache//store/data/Run2017F/SingleElectron/NANOAOD/UL2017_MiniAODv2_NanoAODv9-v1/70000/D8F0FDFD-6815-304B-9E62-9A4A0BE868B8.root"
                 ],
-                "is_data": true,
-                "nevts_total": 128467223.0,
-                "year": "2017"
+                "nevts_total": 128467223.0
             }
-        }
+        },
+        "year": "2017"
     },
     "SingleElectron_G-UL2016": {
+        "is_data": true,
         "variations": {
             "nominal": {
                 "files": [
@@ -4288,13 +4289,13 @@
                     "root://xcache//store/data/Run2016G/SingleElectron/NANOAOD/UL2016_MiniAODv2_NanoAODv9-v1/270000/FD812374-389A-B745-91A5-DB00A00BBAAA.root",
                     "root://xcache//store/data/Run2016G/SingleElectron/NANOAOD/UL2016_MiniAODv2_NanoAODv9-v1/270000/FE6975B4-F048-0F47-A784-6206B98359DB.root"
                 ],
-                "is_data": true,
-                "nevts_total": 153363109.0,
-                "year": "2016"
+                "nevts_total": 153363109.0
             }
-        }
+        },
+        "year": "2016"
     },
     "SingleElectron_H-UL2016": {
+        "is_data": true,
         "variations": {
             "nominal": {
                 "files": [
@@ -4379,13 +4380,13 @@
                     "root://xcache//store/data/Run2016H/SingleElectron/NANOAOD/UL2016_MiniAODv2_NanoAODv9-v1/70000/FA1A4E59-4350-5040-8AB7-7EF830AFA78A.root",
                     "root://xcache//store/data/Run2016H/SingleElectron/NANOAOD/UL2016_MiniAODv2_NanoAODv9-v1/70000/FB585F64-DF88-6247-A3F6-D5CF704FA023.root"
                 ],
-                "is_data": true,
-                "nevts_total": 129021893.0,
-                "year": "2016"
+                "nevts_total": 129021893.0
             }
-        }
+        },
+        "year": "2016"
     },
     "SingleMuon_A-UL2018": {
+        "is_data": true,
         "variations": {
             "nominal": {
                 "files": [
@@ -4482,13 +4483,13 @@
                     "root://xcache//store/data/Run2018A/SingleMuon/NANOAOD/UL2018_MiniAODv2_NanoAODv9-v2/2550000/F962088A-97A7-B14C-B7C1-B8FC8024CED6.root",
                     "root://xcache//store/data/Run2018A/SingleMuon/NANOAOD/UL2018_MiniAODv2_NanoAODv9-v2/30000/208681D0-0FB6-8A4A-A05A-ED10EDBDFD25.root"
                 ],
-                "is_data": true,
-                "nevts_total": 241608232.0,
-                "year": "2018"
+                "nevts_total": 241608232.0
             }
-        }
+        },
+        "year": "2018"
     },
     "SingleMuon_B-UL2017": {
+        "is_data": true,
         "variations": {
             "nominal": {
                 "files": [
@@ -4572,13 +4573,13 @@
                     "root://xcache//store/data/Run2017B/SingleMuon/NANOAOD/UL2017_MiniAODv2_NanoAODv9-v1/70000/F9A78590-FAA3-C640-B650-5B802E9B220C.root",
                     "root://xcache//store/data/Run2017B/SingleMuon/NANOAOD/UL2017_MiniAODv2_NanoAODv9-v1/70000/FF92C696-654E-3C49-831B-9CD4E92E8FAB.root"
                 ],
-                "is_data": true,
-                "nevts_total": 136300266.0,
-                "year": "2017"
+                "nevts_total": 136300266.0
             }
-        }
+        },
+        "year": "2017"
     },
     "SingleMuon_B-UL2018": {
+        "is_data": true,
         "variations": {
             "nominal": {
                 "files": [
@@ -4634,26 +4635,26 @@
                     "root://xcache//store/data/Run2018B/SingleMuon/NANOAOD/UL2018_MiniAODv2_NanoAODv9-v2/250000/FD41A779-5A34-4B42-9DEA-574E73E378FC.root",
                     "root://xcache//store/data/Run2018B/SingleMuon/NANOAOD/UL2018_MiniAODv2_NanoAODv9-v2/250000/FFDC2362-6DC4-CF46-9756-4EE889509C03.root"
                 ],
-                "is_data": true,
-                "nevts_total": 119918017.0,
-                "year": "2018"
+                "nevts_total": 119918017.0
             }
-        }
+        },
+        "year": "2018"
     },
     "SingleMuon_B-ver1_HIPM_UL2016": {
+        "is_data": true,
         "variations": {
             "nominal": {
                 "files": [
                     "root://xcache//store/data/Run2016B/SingleMuon/NANOAOD/ver1_HIPM_UL2016_MiniAODv2_NanoAODv9-v2/2520000/BB6DC570-2223-7B43-BB87-2526FB1639B4.root",
                     "root://xcache//store/data/Run2016B/SingleMuon/NANOAOD/ver1_HIPM_UL2016_MiniAODv2_NanoAODv9-v2/40000/136B48F7-CA92-704E-A81A-BD0F4D9C75F4.root"
                 ],
-                "is_data": true,
-                "nevts_total": 2789243.0,
-                "year": "2016APV"
+                "nevts_total": 2789243.0
             }
-        }
+        },
+        "year": "2016APV"
     },
     "SingleMuon_B-ver2_HIPM_UL2016": {
+        "is_data": true,
         "variations": {
             "nominal": {
                 "files": [
@@ -4728,13 +4729,13 @@
                     "root://xcache//store/data/Run2016B/SingleMuon/NANOAOD/ver2_HIPM_UL2016_MiniAODv2_NanoAODv9-v2/50000/A576B551-8E49-F942-829D-6D0E4655881D.root",
                     "root://xcache//store/data/Run2016B/SingleMuon/NANOAOD/ver2_HIPM_UL2016_MiniAODv2_NanoAODv9-v2/50000/B0D5F476-0C26-A740-8BC1-3A5A544B124D.root"
                 ],
-                "is_data": true,
-                "nevts_total": 158145722.0,
-                "year": "2016APV"
+                "nevts_total": 158145722.0
             }
-        }
+        },
+        "year": "2016APV"
     },
     "SingleMuon_C-HIPM_UL2016": {
+        "is_data": true,
         "variations": {
             "nominal": {
                 "files": [
@@ -4767,13 +4768,13 @@
                     "root://xcache//store/data/Run2016C/SingleMuon/NANOAOD/HIPM_UL2016_MiniAODv2_NanoAODv9-v2/40000/F3D7E5C7-0278-FB4C-8A76-7756D7A9F67B.root",
                     "root://xcache//store/data/Run2016C/SingleMuon/NANOAOD/HIPM_UL2016_MiniAODv2_NanoAODv9-v2/40000/FB6C09E0-1378-FF4B-AC39-67DE52B5AB8E.root"
                 ],
-                "is_data": true,
-                "nevts_total": 67441308.0,
-                "year": "2016APV"
+                "nevts_total": 67441308.0
             }
-        }
+        },
+        "year": "2016APV"
     },
     "SingleMuon_C-UL2017": {
+        "is_data": true,
         "variations": {
             "nominal": {
                 "files": [
@@ -4895,13 +4896,13 @@
                     "root://xcache//store/data/Run2017C/SingleMuon/NANOAOD/UL2017_MiniAODv2_NanoAODv9-v1/70000/F96638CC-0C1E-F640-9855-5FB43BDB4901.root",
                     "root://xcache//store/data/Run2017C/SingleMuon/NANOAOD/UL2017_MiniAODv2_NanoAODv9-v1/70000/FAD93ED5-F96D-8147-A4EC-A3684526BB9C.root"
                 ],
-                "is_data": true,
-                "nevts_total": 165652756.0,
-                "year": "2017"
+                "nevts_total": 165652756.0
             }
-        }
+        },
+        "year": "2017"
     },
     "SingleMuon_C-UL2018": {
+        "is_data": true,
         "variations": {
             "nominal": {
                 "files": [
@@ -4962,13 +4963,13 @@
                     "root://xcache//store/data/Run2018C/SingleMuon/NANOAOD/UL2018_MiniAODv2_NanoAODv9-v2/70000/56BCB25B-AA21-0543-BA3D-CAABB0B1CB08.root",
                     "root://xcache//store/data/Run2018C/SingleMuon/NANOAOD/UL2018_MiniAODv2_NanoAODv9-v2/70000/B6ED2430-8AC2-3F48-AC4C-8395C70AC485.root"
                 ],
-                "is_data": true,
-                "nevts_total": 109986009.0,
-                "year": "2018"
+                "nevts_total": 109986009.0
             }
-        }
+        },
+        "year": "2018"
     },
     "SingleMuon_D-HIPM_UL2016": {
+        "is_data": true,
         "variations": {
             "nominal": {
                 "files": [
@@ -5013,13 +5014,13 @@
                     "root://xcache//store/data/Run2016D/SingleMuon/NANOAOD/HIPM_UL2016_MiniAODv2_NanoAODv9-v2/50000/C4D02BFB-892D-994A-BE72-0F4F824429B8.root",
                     "root://xcache//store/data/Run2016D/SingleMuon/NANOAOD/HIPM_UL2016_MiniAODv2_NanoAODv9-v2/50000/D330BDF4-97CC-4341-9317-5CBAC84D808D.root"
                 ],
-                "is_data": true,
-                "nevts_total": 98017996.0,
-                "year": "2016APV"
+                "nevts_total": 98017996.0
             }
-        }
+        },
+        "year": "2016APV"
     },
     "SingleMuon_D-UL2017": {
+        "is_data": true,
         "variations": {
             "nominal": {
                 "files": [
@@ -5071,13 +5072,13 @@
                     "root://xcache//store/data/Run2017D/SingleMuon/NANOAOD/UL2017_MiniAODv2_NanoAODv9-v1/280000/81933544-19A8-BD47-A9E6-9C18167EDEB9.root",
                     "root://xcache//store/data/Run2017D/SingleMuon/NANOAOD/UL2017_MiniAODv2_NanoAODv9-v1/280000/C8E9C703-2DE7-BD49-B971-11B65AA3756B.root"
                 ],
-                "is_data": true,
-                "nevts_total": 70361660.0,
-                "year": "2017"
+                "nevts_total": 70361660.0
             }
-        }
+        },
+        "year": "2017"
     },
     "SingleMuon_D-UL2018": {
+        "is_data": true,
         "variations": {
             "nominal": {
                 "files": [
@@ -5276,13 +5277,13 @@
                     "root://xcache//store/data/Run2018D/SingleMuon/NANOAOD/UL2018_MiniAODv2_NanoAODv9-v1/280000/FD43C64D-A339-274A-ADA8-59E818541F98.root",
                     "root://xcache//store/data/Run2018D/SingleMuon/NANOAOD/UL2018_MiniAODv2_NanoAODv9-v1/280000/FEC7C306-9785-A54C-966F-0BB2AAB53BD2.root"
                 ],
-                "is_data": true,
-                "nevts_total": 513909894.0,
-                "year": "2018"
+                "nevts_total": 513909894.0
             }
-        }
+        },
+        "year": "2018"
     },
     "SingleMuon_E-HIPM_UL2016": {
+        "is_data": true,
         "variations": {
             "nominal": {
                 "files": [
@@ -5334,13 +5335,13 @@
                     "root://xcache//store/data/Run2016E/SingleMuon/NANOAOD/HIPM_UL2016_MiniAODv2_NanoAODv9-v2/40000/D36DF2E0-999E-4B48-A682-D8029D7305E9.root",
                     "root://xcache//store/data/Run2016E/SingleMuon/NANOAOD/HIPM_UL2016_MiniAODv2_NanoAODv9-v2/40000/F939C809-771C-664B-A1D5-A5E2A67465E8.root"
                 ],
-                "is_data": true,
-                "nevts_total": 90984718.0,
-                "year": "2016APV"
+                "nevts_total": 90984718.0
             }
-        }
+        },
+        "year": "2016APV"
     },
     "SingleMuon_E-UL2017": {
+        "is_data": true,
         "variations": {
             "nominal": {
                 "files": [
@@ -5423,13 +5424,13 @@
                     "root://xcache//store/data/Run2017E/SingleMuon/NANOAOD/UL2017_MiniAODv2_NanoAODv9-v1/40000/F6FE1BF9-A6BB-A444-BD6E-07DAA6CF1C96.root",
                     "root://xcache//store/data/Run2017E/SingleMuon/NANOAOD/UL2017_MiniAODv2_NanoAODv9-v1/70000/78A596F8-FC21-FE48-B150-CFFF6895BA27.root"
                 ],
-                "is_data": true,
-                "nevts_total": 154618774.0,
-                "year": "2017"
+                "nevts_total": 154618774.0
             }
-        }
+        },
+        "year": "2017"
     },
     "SingleMuon_F-HIPM_UL2016": {
+        "is_data": true,
         "variations": {
             "nominal": {
                 "files": [
@@ -5477,13 +5478,13 @@
                     "root://xcache//store/data/Run2016F/SingleMuon/NANOAOD/HIPM_UL2016_MiniAODv2_NanoAODv9-v2/50000/ECC050F5-37B4-9242-A315-021113A3C25A.root",
                     "root://xcache//store/data/Run2016F/SingleMuon/NANOAOD/HIPM_UL2016_MiniAODv2_NanoAODv9-v2/50000/F5A5AA76-1E24-2748-81D7-F17B73042E4D.root"
                 ],
-                "is_data": true,
-                "nevts_total": 57465359.0,
-                "year": "2016APV"
+                "nevts_total": 57465359.0
             }
-        }
+        },
+        "year": "2016APV"
     },
     "SingleMuon_F-UL2016": {
+        "is_data": true,
         "variations": {
             "nominal": {
                 "files": [
@@ -5493,13 +5494,13 @@
                     "root://xcache//store/data/Run2016F/SingleMuon/NANOAOD/UL2016_MiniAODv2_NanoAODv9-v1/70000/0B54974C-D6CA-0748-9ED9-03BB3DDD82C8.root",
                     "root://xcache//store/data/Run2016F/SingleMuon/NANOAOD/UL2016_MiniAODv2_NanoAODv9-v1/70000/15A7AA88-B1A1-384F-8AA5-13031C1A5E87.root"
                 ],
-                "is_data": true,
-                "nevts_total": 8024195.0,
-                "year": "2016"
+                "nevts_total": 8024195.0
             }
-        }
+        },
+        "year": "2016"
     },
     "SingleMuon_F-UL2017": {
+        "is_data": true,
         "variations": {
             "nominal": {
                 "files": [
@@ -5619,13 +5620,13 @@
                     "root://xcache//store/data/Run2017F/SingleMuon/NANOAOD/UL2017_MiniAODv2_NanoAODv9-v1/70000/FC0DFC16-1564-4D4C-BA3D-E79CCAE9A092.root",
                     "root://xcache//store/data/Run2017F/SingleMuon/NANOAOD/UL2017_MiniAODv2_NanoAODv9-v1/70000/FE8EA623-2765-BD41-828F-FB7C54DDECAC.root"
                 ],
-                "is_data": true,
-                "nevts_total": 242140980.0,
-                "year": "2017"
+                "nevts_total": 242140980.0
             }
-        }
+        },
+        "year": "2017"
     },
     "SingleMuon_G-UL2016": {
+        "is_data": true,
         "variations": {
             "nominal": {
                 "files": [
@@ -5700,13 +5701,13 @@
                     "root://xcache//store/data/Run2016G/SingleMuon/NANOAOD/UL2016_MiniAODv2_NanoAODv9-v1/70000/F3F7C96C-CF45-EB45-918C-9E5A05F8D899.root",
                     "root://xcache//store/data/Run2016G/SingleMuon/NANOAOD/UL2016_MiniAODv2_NanoAODv9-v1/70000/F4BB5330-5236-5940-BA0B-F13088D94F5E.root"
                 ],
-                "is_data": true,
-                "nevts_total": 149916849.0,
-                "year": "2016"
+                "nevts_total": 149916849.0
             }
-        }
+        },
+        "year": "2016"
     },
     "SingleMuon_H-UL2016": {
+        "is_data": true,
         "variations": {
             "nominal": {
                 "files": [
@@ -5793,13 +5794,13 @@
                     "root://xcache//store/data/Run2016H/SingleMuon/NANOAOD/UL2016_MiniAODv2_NanoAODv9-v1/70000/F773638E-CE20-944A-A120-755C3E071B2F.root",
                     "root://xcache//store/data/Run2016H/SingleMuon/NANOAOD/UL2016_MiniAODv2_NanoAODv9-v1/70000/FBD685D1-F6C9-8946-BA61-14F8DB0B1B82.root"
                 ],
-                "is_data": true,
-                "nevts_total": 174035164.0,
-                "year": "2016"
+                "nevts_total": 174035164.0
             }
-        }
+        },
+        "year": "2016"
     },
     "TTJets_UL2016": {
+        "is_data": false,
         "variations": {
             "nominal": {
                 "files": [
@@ -5913,13 +5914,13 @@
                     "root://xcache//store/mc/RunIISummer20UL16NanoAODv9/TTJets_TuneCP5_13TeV-amcatnloFXFX-pythia8/NANOAODSIM/106X_mcRun2_asymptotic_v17-v1/50000/7C143633-EB14-5343-9F7A-906FA51A607F.root",
                     "root://xcache//store/mc/RunIISummer20UL16NanoAODv9/TTJets_TuneCP5_13TeV-amcatnloFXFX-pythia8/NANOAODSIM/106X_mcRun2_asymptotic_v17-v1/50000/C76DA3B6-4C8F-374B-B53B-EAA855C423DE.root"
                 ],
-                "is_data": false,
-                "nevts_total": 89003534,
-                "year": "2016"
+                "nevts_total": 89003534
             }
-        }
+        },
+        "year": "2016"
     },
     "TTJets_UL2016APV": {
+        "is_data": false,
         "variations": {
             "nominal": {
                 "files": [
@@ -6019,13 +6020,13 @@
                     "root://xcache//store/mc/RunIISummer20UL16NanoAODAPVv9/TTJets_TuneCP5_13TeV-amcatnloFXFX-pythia8/NANOAODSIM/106X_mcRun2_asymptotic_preVFP_v11-v1/50000/6A4C7476-B6DA-3847-A58F-D45B2E3BEC5B.root",
                     "root://xcache//store/mc/RunIISummer20UL16NanoAODAPVv9/TTJets_TuneCP5_13TeV-amcatnloFXFX-pythia8/NANOAODSIM/106X_mcRun2_asymptotic_preVFP_v11-v1/50000/8C7DC851-ED03-2C49-8D54-37C74B3B4CD7.root"
                 ],
-                "is_data": false,
-                "nevts_total": 93965988,
-                "year": "2016APV"
+                "nevts_total": 93965988
             }
-        }
+        },
+        "year": "2016APV"
     },
     "TTJets_UL2017": {
+        "is_data": false,
         "variations": {
             "nominal": {
                 "files": [
@@ -6239,13 +6240,13 @@
                     "root://xcache//store/mc/RunIISummer20UL17NanoAODv9/TTJets_TuneCP5_13TeV-amcatnloFXFX-pythia8/NANOAODSIM/106X_mc2017_realistic_v9-v1/280000/FF5E8922-ACAF-6A44-89C1-2990EDBC8917.root",
                     "root://xcache//store/mc/RunIISummer20UL17NanoAODv9/TTJets_TuneCP5_13TeV-amcatnloFXFX-pythia8/NANOAODSIM/106X_mc2017_realistic_v9-v1/70000/1F3CC372-76C6-F34D-A4AD-298DB5E380D1.root"
                 ],
-                "is_data": false,
-                "nevts_total": 248174388,
-                "year": "2017"
+                "nevts_total": 248174388
             }
-        }
+        },
+        "year": "2017"
     },
     "TTJets_UL2018": {
+        "is_data": false,
         "variations": {
             "nominal": {
                 "files": [
@@ -6604,13 +6605,13 @@
                     "root://xcache//store/mc/RunIISummer20UL18NanoAODv9/TTJets_TuneCP5_13TeV-amcatnloFXFX-pythia8/NANOAODSIM/106X_upgrade2018_realistic_v16_L1v1-v1/50000/FCC88154-3576-2148-8B68-81A467D08BC8.root",
                     "root://xcache//store/mc/RunIISummer20UL18NanoAODv9/TTJets_TuneCP5_13TeV-amcatnloFXFX-pythia8/NANOAODSIM/106X_upgrade2018_realistic_v16_L1v1-v1/50000/FDD54DDA-37D0-F548-BCF8-324B618CD58A.root"
                 ],
-                "is_data": false,
-                "nevts_total": 304895029,
-                "year": "2018"
+                "nevts_total": 304895029
             }
-        }
+        },
+        "year": "2018"
     },
     "TTTo2L2Nu_UL2016": {
+        "is_data": false,
         "variations": {
             "nominal": {
                 "files": [
@@ -6664,13 +6665,13 @@
                     "root://xcache//store/mc/RunIISummer20UL16NanoAODv9/TTTo2L2Nu_TuneCP5_13TeV-powheg-pythia8/NANOAODSIM/106X_mcRun2_asymptotic_v17-v1/70000/D31DE67D-37F2-3C4C-B4F3-476D1918B317.root",
                     "root://xcache//store/mc/RunIISummer20UL16NanoAODv9/TTTo2L2Nu_TuneCP5_13TeV-powheg-pythia8/NANOAODSIM/106X_mcRun2_asymptotic_v17-v1/70000/F31E8599-8744-664B-A935-833FDB1979CB.root"
                 ],
-                "is_data": false,
-                "nevts_total": 43546000,
-                "year": "2016"
+                "nevts_total": 43546000
             }
-        }
+        },
+        "year": "2016"
     },
     "TTTo2L2Nu_UL2016APV": {
+        "is_data": false,
         "variations": {
             "nominal": {
                 "files": [
@@ -6708,13 +6709,13 @@
                     "root://xcache//store/mc/RunIISummer20UL16NanoAODAPVv9/TTTo2L2Nu_TuneCP5_13TeV-powheg-pythia8/NANOAODSIM/106X_mcRun2_asymptotic_preVFP_v11-v1/100000/E867C14D-2453-5645-840E-6576EC140C42.root",
                     "root://xcache//store/mc/RunIISummer20UL16NanoAODAPVv9/TTTo2L2Nu_TuneCP5_13TeV-powheg-pythia8/NANOAODSIM/106X_mcRun2_asymptotic_preVFP_v11-v1/100000/F5062EDC-F599-FE4C-86F7-9A0A1FE2EDE4.root"
                 ],
-                "is_data": false,
-                "nevts_total": 37505000,
-                "year": "2016APV"
+                "nevts_total": 37505000
             }
-        }
+        },
+        "year": "2016APV"
     },
     "TTTo2L2Nu_UL2017": {
+        "is_data": false,
         "variations": {
             "nominal": {
                 "files": [
@@ -6818,13 +6819,13 @@
                     "root://xcache//store/mc/RunIISummer20UL17NanoAODv9/TTTo2L2Nu_TuneCP5_13TeV-powheg-pythia8/NANOAODSIM/106X_mc2017_realistic_v9-v1/2510000/FCB1FFA3-61A2-E54B-94F0-C04B0992FFEB.root",
                     "root://xcache//store/mc/RunIISummer20UL17NanoAODv9/TTTo2L2Nu_TuneCP5_13TeV-powheg-pythia8/NANOAODSIM/106X_mc2017_realistic_v9-v1/2510000/FE36F1D8-BED8-A14D-BB5E-D3FFB842EFE8.root"
                 ],
-                "is_data": false,
-                "nevts_total": 106724000,
-                "year": "2017"
+                "nevts_total": 106724000
             }
-        }
+        },
+        "year": "2017"
     },
     "TTTo2L2Nu_UL2018": {
+        "is_data": false,
         "variations": {
             "nominal": {
                 "files": [
@@ -6984,13 +6985,13 @@
                     "root://xcache//store/mc/RunIISummer20UL18NanoAODv9/TTTo2L2Nu_TuneCP5_13TeV-powheg-pythia8/NANOAODSIM/106X_upgrade2018_realistic_v16_L1v1-v1/70000/59A037C7-BA84-254D-A164-D1D1319EF22B.root",
                     "root://xcache//store/mc/RunIISummer20UL18NanoAODv9/TTTo2L2Nu_TuneCP5_13TeV-powheg-pythia8/NANOAODSIM/106X_upgrade2018_realistic_v16_L1v1-v1/70000/FD8CE2C8-4049-E840-9F33-BEDAABC17134.root"
                 ],
-                "is_data": false,
-                "nevts_total": 145020000,
-                "year": "2018"
+                "nevts_total": 145020000
             }
-        }
+        },
+        "year": "2018"
     },
     "TTToSemiLeptonic_UL2016": {
+        "is_data": false,
         "variations": {
             "nominal": {
                 "files": [
@@ -7133,13 +7134,13 @@
                     "root://xcache//store/mc/RunIISummer20UL16NanoAODv9/TTToSemiLeptonic_TuneCP5_13TeV-powheg-pythia8/NANOAODSIM/106X_mcRun2_asymptotic_v17-v1/70000/F5E9EC3E-3496-A842-A407-544FBAB06F6A.root",
                     "root://xcache//store/mc/RunIISummer20UL16NanoAODv9/TTToSemiLeptonic_TuneCP5_13TeV-powheg-pythia8/NANOAODSIM/106X_mcRun2_asymptotic_v17-v1/70000/F8F5865F-5E5E-5C49-9044-99D712F0F18B.root"
                 ],
-                "is_data": false,
-                "nevts_total": 144722000,
-                "year": "2016"
+                "nevts_total": 144722000
             }
-        }
+        },
+        "year": "2016"
     },
     "TTToSemiLeptonic_UL2016APV": {
+        "is_data": false,
         "variations": {
             "nominal": {
                 "files": [
@@ -7261,13 +7262,13 @@
                     "root://xcache//store/mc/RunIISummer20UL16NanoAODAPVv9/TTToSemiLeptonic_TuneCP5_13TeV-powheg-pythia8/NANOAODSIM/106X_mcRun2_asymptotic_preVFP_v11-v1/70000/DB232626-FA6E-3C4B-ACD0-5BC385F9F0E8.root",
                     "root://xcache//store/mc/RunIISummer20UL16NanoAODAPVv9/TTToSemiLeptonic_TuneCP5_13TeV-powheg-pythia8/NANOAODSIM/106X_mcRun2_asymptotic_preVFP_v11-v1/70000/F985999A-DA55-EF49-A024-AF759B96A054.root"
                 ],
-                "is_data": false,
-                "nevts_total": 132178000,
-                "year": "2016APV"
+                "nevts_total": 132178000
             }
-        }
+        },
+        "year": "2016APV"
     },
     "TTToSemiLeptonic_UL2017": {
+        "is_data": false,
         "variations": {
             "nominal": {
                 "files": [
@@ -7569,13 +7570,13 @@
                     "root://xcache//store/mc/RunIISummer20UL17NanoAODv9/TTToSemiLeptonic_TuneCP5_13TeV-powheg-pythia8/NANOAODSIM/106X_mc2017_realistic_v9-v1/280000/FA87BDC7-5E95-8349-9147-6FA3AA264B2F.root",
                     "root://xcache//store/mc/RunIISummer20UL17NanoAODv9/TTToSemiLeptonic_TuneCP5_13TeV-powheg-pythia8/NANOAODSIM/106X_mc2017_realistic_v9-v1/280000/FD8DDDD5-B044-F54C-AC39-4148E3751095.root"
                 ],
-                "is_data": false,
-                "nevts_total": 346052000,
-                "year": "2017"
+                "nevts_total": 346052000
             }
-        }
+        },
+        "year": "2017"
     },
     "TTToSemiLeptonic_UL2018": {
+        "is_data": false,
         "variations": {
             "nominal": {
                 "files": [
@@ -7971,13 +7972,13 @@
                     "root://xcache//store/mc/RunIISummer20UL18NanoAODv9/TTToSemiLeptonic_TuneCP5_13TeV-powheg-pythia8/NANOAODSIM/106X_upgrade2018_realistic_v16_L1v1-v1/70000/FA4AB21C-A6CD-354B-B612-4454BB1DCDF6.root",
                     "root://xcache//store/mc/RunIISummer20UL18NanoAODv9/TTToSemiLeptonic_TuneCP5_13TeV-powheg-pythia8/NANOAODSIM/106X_upgrade2018_realistic_v16_L1v1-v1/70000/FD21FACC-304D-6F46-857D-C521B22C890A.root"
                 ],
-                "is_data": false,
-                "nevts_total": 476408000,
-                "year": "2018"
+                "nevts_total": 476408000
             }
-        }
+        },
+        "year": "2018"
     },
     "WJetsToLNu_UL2016": {
+        "is_data": false,
         "variations": {
             "nominal": {
                 "files": [
@@ -8050,13 +8051,13 @@
                     "root://xcache//store/mc/RunIISummer20UL16NanoAODv9/WJetsToLNu_TuneCP5_13TeV-madgraphMLM-pythia8/NANOAODSIM/106X_mcRun2_asymptotic_v17-v1/280000/F5E2630A-AFE2-4046-8793-066DFBC27ABB.root",
                     "root://xcache//store/mc/RunIISummer20UL16NanoAODv9/WJetsToLNu_TuneCP5_13TeV-madgraphMLM-pythia8/NANOAODSIM/106X_mcRun2_asymptotic_v17-v1/70000/1A6F1D10-B812-4744-91CB-6FA15428CD53.root"
                 ],
-                "is_data": false,
-                "nevts_total": 80958227,
-                "year": "2016"
+                "nevts_total": 80958227
             }
-        }
+        },
+        "year": "2016"
     },
     "WJetsToLNu_UL2016APV": {
+        "is_data": false,
         "variations": {
             "nominal": {
                 "files": [
@@ -8120,13 +8121,13 @@
                     "root://xcache//store/mc/RunIISummer20UL16NanoAODAPVv9/WJetsToLNu_TuneCP5_13TeV-amcatnloFXFX-pythia8/NANOAODSIM/106X_mcRun2_asymptotic_preVFP_v11-v2/40000/E7122A98-858B-154B-BC80-228887594F96.root",
                     "root://xcache//store/mc/RunIISummer20UL16NanoAODAPVv9/WJetsToLNu_TuneCP5_13TeV-amcatnloFXFX-pythia8/NANOAODSIM/106X_mcRun2_asymptotic_preVFP_v11-v2/40000/F7F1E17F-7561-7845-B953-942A117D91AE.root"
                 ],
-                "is_data": false,
-                "nevts_total": 28949426,
-                "year": "2016APV"
+                "nevts_total": 28949426
             }
-        }
+        },
+        "year": "2016APV"
     },
     "WJetsToLNu_UL2017": {
+        "is_data": false,
         "variations": {
             "nominal": {
                 "files": [
@@ -8212,13 +8213,13 @@
                     "root://xcache//store/mc/RunIISummer20UL17NanoAODv9/WJetsToLNu_TuneCP5_13TeV-madgraphMLM-pythia8/NANOAODSIM/106X_mc2017_realistic_v9-v1/280000/F1BAA526-780C-3447-B6AA-8B1ADD0D7BA7.root",
                     "root://xcache//store/mc/RunIISummer20UL17NanoAODv9/WJetsToLNu_TuneCP5_13TeV-madgraphMLM-pythia8/NANOAODSIM/106X_mc2017_realistic_v9-v1/280000/F5F9EE3C-A6DA-B348-99E9-E704DB22FC23.root"
                 ],
-                "is_data": false,
-                "nevts_total": 78307186,
-                "year": "2017"
+                "nevts_total": 78307186
             }
-        }
+        },
+        "year": "2017"
     },
     "WJetsToLNu_UL2018": {
+        "is_data": false,
         "variations": {
             "nominal": {
                 "files": [
@@ -8317,13 +8318,13 @@
                     "root://xcache//store/mc/RunIISummer20UL18NanoAODv9/WJetsToLNu_TuneCP5_13TeV-madgraphMLM-pythia8/NANOAODSIM/106X_upgrade2018_realistic_v16_L1v1-v1/70000/7F7BC878-9F5C-924A-B93A-7521BBF3ADDC.root",
                     "root://xcache//store/mc/RunIISummer20UL18NanoAODv9/WJetsToLNu_TuneCP5_13TeV-madgraphMLM-pythia8/NANOAODSIM/106X_upgrade2018_realistic_v16_L1v1-v1/70000/D51509BF-39B9-3C42-987F-715B1AA1BBFB.root"
                 ],
-                "is_data": false,
-                "nevts_total": 81051269,
-                "year": "2018"
+                "nevts_total": 81051269
             }
-        }
+        },
+        "year": "2018"
     },
     "WWTo2L2Nu_UL2016": {
+        "is_data": false,
         "variations": {
             "nominal": {
                 "files": [
@@ -8335,13 +8336,13 @@
                     "root://xcache//store/mc/RunIISummer20UL16NanoAODv9/WWTo2L2Nu_TuneCP5_13TeV-powheg-pythia8/NANOAODSIM/106X_mcRun2_asymptotic_v17-v1/70000/860D3EE2-4083-4441-95D6-A0D1A3034862.root",
                     "root://xcache//store/mc/RunIISummer20UL16NanoAODv9/WWTo2L2Nu_TuneCP5_13TeV-powheg-pythia8/NANOAODSIM/106X_mcRun2_asymptotic_v17-v1/70000/E971939B-F569-6045-971B-B317291E688E.root"
                 ],
-                "is_data": false,
-                "nevts_total": 2900000,
-                "year": "2016"
+                "nevts_total": 2900000
             }
-        }
+        },
+        "year": "2016"
     },
     "WWTo2L2Nu_UL2016APV": {
+        "is_data": false,
         "variations": {
             "nominal": {
                 "files": [
@@ -8358,13 +8359,13 @@
                     "root://xcache//store/mc/RunIISummer20UL16NanoAODAPVv9/WWTo2L2Nu_TuneCP5_13TeV-powheg-pythia8/NANOAODSIM/106X_mcRun2_asymptotic_preVFP_v11-v1/70000/3D52C4D3-16E2-D04F-B6D4-4AACCC9C8D6B.root",
                     "root://xcache//store/mc/RunIISummer20UL16NanoAODAPVv9/WWTo2L2Nu_TuneCP5_13TeV-powheg-pythia8/NANOAODSIM/106X_mcRun2_asymptotic_preVFP_v11-v1/70000/F5BBEB71-414E-AC49-8641-2A30126CEA45.root"
                 ],
-                "is_data": false,
-                "nevts_total": 3018000,
-                "year": "2016APV"
+                "nevts_total": 3018000
             }
-        }
+        },
+        "year": "2016APV"
     },
     "WWTo2L2Nu_UL2017": {
+        "is_data": false,
         "variations": {
             "nominal": {
                 "files": [
@@ -8415,13 +8416,13 @@
                     "root://xcache//store/mc/RunIISummer20UL17NanoAODv9/WWTo2L2Nu_TuneCP5_13TeV-powheg-pythia8/NANOAODSIM/106X_mc2017_realistic_v9-v2/270000/D8CA6723-FACD-304F-9074-88B95F176E0F.root",
                     "root://xcache//store/mc/RunIISummer20UL17NanoAODv9/WWTo2L2Nu_TuneCP5_13TeV-powheg-pythia8/NANOAODSIM/106X_mc2017_realistic_v9-v2/270000/E1A25F01-338D-2F4E-951B-F8B9FAD37FCD.root"
                 ],
-                "is_data": false,
-                "nevts_total": 7098000,
-                "year": "2017"
+                "nevts_total": 7098000
             }
-        }
+        },
+        "year": "2017"
     },
     "WWTo2L2Nu_UL2018": {
+        "is_data": false,
         "variations": {
             "nominal": {
                 "files": [
@@ -8463,13 +8464,13 @@
                     "root://xcache//store/mc/RunIISummer20UL18NanoAODv9/WWTo2L2Nu_TuneCP5_13TeV-powheg-pythia8/NANOAODSIM/106X_upgrade2018_realistic_v16_L1v1-v2/260000/E6C7E5A0-35B5-B549-B6AA-A280D742F106.root",
                     "root://xcache//store/mc/RunIISummer20UL18NanoAODv9/WWTo2L2Nu_TuneCP5_13TeV-powheg-pythia8/NANOAODSIM/106X_upgrade2018_realistic_v16_L1v1-v2/260000/F92E8910-ADF3-EC45-92F2-A82A0519278B.root"
                 ],
-                "is_data": false,
-                "nevts_total": 9994000,
-                "year": "2018"
+                "nevts_total": 9994000
             }
-        }
+        },
+        "year": "2018"
     },
     "WZTo3LNu_UL2016": {
+        "is_data": false,
         "variations": {
             "nominal": {
                 "files": [
@@ -8492,13 +8493,13 @@
                     "root://xcache//store/mc/RunIISummer20UL16NanoAODv9/WZTo3LNu_mllmin4p0_TuneCP5_13TeV-powheg-pythia8/NANOAODSIM/106X_mcRun2_asymptotic_v17-v2/260000/FCE526F4-3BE7-3143-845C-307E49EC4E4B.root",
                     "root://xcache//store/mc/RunIISummer20UL16NanoAODv9/WZTo3LNu_mllmin4p0_TuneCP5_13TeV-powheg-pythia8/NANOAODSIM/106X_mcRun2_asymptotic_v17-v2/40000/F31455BF-2410-9044-8181-F0CA054477C4.root"
                 ],
-                "is_data": false,
-                "nevts_total": 904000,
-                "year": "2016"
+                "nevts_total": 904000
             }
-        }
+        },
+        "year": "2016"
     },
     "WZTo3LNu_UL2016APV": {
+        "is_data": false,
         "variations": {
             "nominal": {
                 "files": [
@@ -8513,13 +8514,13 @@
                     "root://xcache//store/mc/RunIISummer20UL16NanoAODAPVv9/WZTo3LNu_mllmin4p0_TuneCP5_13TeV-powheg-pythia8/NANOAODSIM/106X_mcRun2_asymptotic_preVFP_v11-v1/60000/B07DE5E5-91AA-5046-AEB5-BC269A2D831A.root",
                     "root://xcache//store/mc/RunIISummer20UL16NanoAODAPVv9/WZTo3LNu_mllmin4p0_TuneCP5_13TeV-powheg-pythia8/NANOAODSIM/106X_mcRun2_asymptotic_preVFP_v11-v1/60000/F04AFCAE-C6BD-694D-B019-F666C050E5AE.root"
                 ],
-                "is_data": false,
-                "nevts_total": 1080000,
-                "year": "2016APV"
+                "nevts_total": 1080000
             }
-        }
+        },
+        "year": "2016APV"
     },
     "WZTo3LNu_UL2017": {
+        "is_data": false,
         "variations": {
             "nominal": {
                 "files": [
@@ -8535,13 +8536,13 @@
                     "root://xcache//store/mc/RunIISummer20UL17NanoAODv9/WZTo3LNu_mllmin4p0_TuneCP5_13TeV-powheg-pythia8/NANOAODSIM/106X_mc2017_realistic_v9-v2/250000/FEC4DFE5-8320-E846-B05E-ACF264EAAA1A.root",
                     "root://xcache//store/mc/RunIISummer20UL17NanoAODv9/WZTo3LNu_mllmin4p0_TuneCP5_13TeV-powheg-pythia8/NANOAODSIM/106X_mc2017_realistic_v9-v2/260000/3491C952-675E-F94D-B389-C215E80D896B.root"
                 ],
-                "is_data": false,
-                "nevts_total": 1994000,
-                "year": "2017"
+                "nevts_total": 1994000
             }
-        }
+        },
+        "year": "2017"
     },
     "WZTo3LNu_UL2018": {
+        "is_data": false,
         "variations": {
             "nominal": {
                 "files": [
@@ -8565,13 +8566,13 @@
                     "root://xcache//store/mc/RunIISummer20UL18NanoAODv9/WZTo3LNu_mllmin4p0_TuneCP5_13TeV-powheg-pythia8/NANOAODSIM/106X_upgrade2018_realistic_v16_L1v1-v2/260000/605B4138-CB68-6542-8A2A-26CA7421D5A2.root",
                     "root://xcache//store/mc/RunIISummer20UL18NanoAODv9/WZTo3LNu_mllmin4p0_TuneCP5_13TeV-powheg-pythia8/NANOAODSIM/106X_upgrade2018_realistic_v16_L1v1-v2/40000/690BBF34-A9B7-FE4D-9D76-D0C0A86ABD1C.root"
                 ],
-                "is_data": false,
-                "nevts_total": 1998000,
-                "year": "2018"
+                "nevts_total": 1998000
             }
-        }
+        },
+        "year": "2018"
     },
     "ZZTo4L_UL2016": {
+        "is_data": false,
         "variations": {
             "nominal": {
                 "files": [
@@ -8675,13 +8676,13 @@
                     "root://xcache//store/mc/RunIISummer20UL16NanoAODv9/ZZTo4L_TuneCP5_13TeV_powheg_pythia8/NANOAODSIM/106X_mcRun2_asymptotic_v17-v1/50000/F530C8BA-A6B7-2B47-A10E-38A58BF3C778.root",
                     "root://xcache//store/mc/RunIISummer20UL16NanoAODv9/ZZTo4L_TuneCP5_13TeV_powheg_pythia8/NANOAODSIM/106X_mcRun2_asymptotic_v17-v1/50000/F6DAC289-61E4-9E40-95A5-F950DA1724D9.root"
                 ],
-                "is_data": false,
-                "nevts_total": 52104000,
-                "year": "2016"
+                "nevts_total": 52104000
             }
-        }
+        },
+        "year": "2016"
     },
     "ZZTo4L_UL2016APV": {
+        "is_data": false,
         "variations": {
             "nominal": {
                 "files": [
@@ -8730,13 +8731,13 @@
                     "root://xcache//store/mc/RunIISummer20UL16NanoAODAPVv9/ZZTo4L_TuneCP5_13TeV_powheg_pythia8/NANOAODSIM/106X_mcRun2_asymptotic_preVFP_v11-v1/2430000/FD75B736-BE60-3E42-8F76-A32FBBF0339C.root",
                     "root://xcache//store/mc/RunIISummer20UL16NanoAODAPVv9/ZZTo4L_TuneCP5_13TeV_powheg_pythia8/NANOAODSIM/106X_mcRun2_asymptotic_preVFP_v11-v1/2430000/FE88E820-3D97-604D-BE86-92F0AB644A71.root"
                 ],
-                "is_data": false,
-                "nevts_total": 49691000,
-                "year": "2016APV"
+                "nevts_total": 49691000
             }
-        }
+        },
+        "year": "2016APV"
     },
     "ZZTo4L_UL2017": {
+        "is_data": false,
         "variations": {
             "nominal": {
                 "files": [
@@ -8850,13 +8851,13 @@
                     "root://xcache//store/mc/RunIISummer20UL17NanoAODv9/ZZTo4L_TuneCP5_13TeV_powheg_pythia8/NANOAODSIM/106X_mc2017_realistic_v9-v2/70000/D35CAEE7-D679-D147-B2DD-D4F13C75367A.root",
                     "root://xcache//store/mc/RunIISummer20UL17NanoAODv9/ZZTo4L_TuneCP5_13TeV_powheg_pythia8/NANOAODSIM/106X_mc2017_realistic_v9-v2/70000/F27223E7-12AB-B049-BB75-6A9600D2DAB7.root"
                 ],
-                "is_data": false,
-                "nevts_total": 99388000,
-                "year": "2017"
+                "nevts_total": 99388000
             }
-        }
+        },
+        "year": "2017"
     },
     "ZZTo4L_UL2018": {
+        "is_data": false,
         "variations": {
             "nominal": {
                 "files": [
@@ -9005,10 +9006,9 @@
                     "root://xcache//store/mc/RunIISummer20UL18NanoAODv9/ZZTo4L_TuneCP5_13TeV_powheg_pythia8/NANOAODSIM/106X_upgrade2018_realistic_v16_L1v1-v2/70000/FF9D8175-AFF1-BA48-80BE-955435398B2E.root",
                     "root://xcache//store/mc/RunIISummer20UL18NanoAODv9/ZZTo4L_TuneCP5_13TeV_powheg_pythia8/NANOAODSIM/106X_upgrade2018_realistic_v16_L1v1-v2/70000/FFEE9C1C-CFF9-1C45-A2D2-7FD4AD28BACC.root"
                 ],
-                "is_data": false,
-                "nevts_total": 98488000,
-                "year": "2018"
+                "nevts_total": 98488000
             }
-        }
+        },
+        "year": "2018"
     }
 }
